@@ -1,0 +1,48 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.buswatch.driver" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+6
+7    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+7-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:5:5-79
+7-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:5:22-76
+8    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+8-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:6:5-81
+8-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:6:22-78
+9    <uses-permission android:name="android.permission.INTERNET" />
+9-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:7:5-67
+9-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:7:22-64
+10    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+10-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:8:5-79
+10-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:8:22-76
+11
+12    <queries>
+12-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:10:5-15:15
+13        <package android:name="com.google.android.gms" />
+13-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:11:9-58
+13-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:11:18-55
+14
+15        <intent>
+15-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:12:9-14:18
+16            <action android:name="com.google.android.gms.plus.action.QUICK_LOOKUP" />
+16-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:13:13-86
+16-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:13:21-83
+17        </intent>
+18    </queries>
+19
+20    <application
+20-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:17:5-24:19
+21        android:allowBackup="true"
+21-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:18:9-35
+22        android:supportsRtl="true" >
+22-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:19:9-35
+23        <activity
+23-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:21:9-23:40
+24            android:name="com.example.buswatch.driver.DriverHome"
+24-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:22:13-39
+25            android:exported="false" />
+25-->/Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:23:13-37
+26    </application>
+27
+28</manifest>

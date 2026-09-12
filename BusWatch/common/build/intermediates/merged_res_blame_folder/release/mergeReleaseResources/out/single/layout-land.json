@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/layout-land/material_clock_period_toggle_land.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/layout-land/material_clock_period_toggle_land.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/layout-land/material_timepicker.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/layout-land/material_timepicker.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/layout-land/mtrl_picker_header_dialog.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/layout-land/mtrl_picker_header_dialog.xml"
+    }
+]

@@ -1702,3 +1702,15 @@ footer {
 .btn-primary-modal:hover {
     background: var(--primary-hover);
 }
+
+.btn-apk-action {
+    background: #10B981;
+    color: #FFFFFF;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+}
+.btn-apk-action:hover {
+    background: #059669;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.5);
+    color: #FFFFFF;
+}

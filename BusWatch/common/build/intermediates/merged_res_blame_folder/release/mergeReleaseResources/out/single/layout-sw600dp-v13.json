@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
+    }
+]

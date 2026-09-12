@@ -127,7 +127,9 @@ class AdminHome : AppCompatActivity() {
     fun playSOSAlarm() {
         try {
             if (mediaPlayer == null) {
-                mediaPlayer = MediaPlayer.create(this, CommonR.raw.sos_alarm)
+                val alarmUri = android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_ALARM)
+                    ?: android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_NOTIFICATION)
+                mediaPlayer = MediaPlayer.create(this, alarmUri)
                 mediaPlayer?.isLooping = true
             }
             if (mediaPlayer?.isPlaying == false) {

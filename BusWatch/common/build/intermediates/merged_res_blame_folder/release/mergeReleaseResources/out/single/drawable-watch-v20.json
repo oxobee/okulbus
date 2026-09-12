@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "com.example.buswatch.common-play-services-auth-20.7.0-6:/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "com.example.buswatch.common-play-services-auth-20.7.0-6:/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-watch-v20/abc_dialog_material_background.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable-watch-v20/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "com.example.buswatch.common-play-services-auth-20.7.0-6:/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    }
+]

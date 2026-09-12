@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.admin-release-2:/menu/crop_rotate_menu.xml",
+        "source": "com.example.buswatch.admin-cloudinary-android-ui-3.1.2-86:/menu/crop_rotate_menu.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/menu/upload_widget_menu.xml",
+        "source": "com.example.buswatch.admin-cloudinary-android-ui-3.1.2-86:/menu/upload_widget_menu.xml"
+    }
+]

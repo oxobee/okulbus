@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.admin-release-2:/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "source": "com.example.buswatch.admin-main-3:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/mipmap-anydpi-v26/ic_launcher.xml",
+        "source": "com.example.buswatch.admin-main-3:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

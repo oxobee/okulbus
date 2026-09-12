@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout-land/material_timepicker.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout-land/material_timepicker.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout-land/mtrl_picker_header_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout-land/mtrl_picker_header_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout-land/material_clock_period_toggle_land.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout-land/material_clock_period_toggle_land.xml"
+    }
+]

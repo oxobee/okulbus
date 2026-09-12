@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_previous.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_previous.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_chevron_right.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_chevron_right.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_rewind.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_rewind.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_play.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_play.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_fastforward.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_fastforward.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_check.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_check.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_default_album_image.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_default_album_image.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_repeat_all.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_repeat_all.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_fullscreen_enter.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_fullscreen_enter.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/ic_password.xml",
+        "source": "com.example.buswatch.admin-credentials-1.2.0-rc01-29:/drawable-anydpi-v21/ic_password.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_rewind.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_rewind.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_pause.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_pause.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_speed.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_speed.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_subtitle_off.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_subtitle_off.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_play_circle_filled.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_play_circle_filled.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_skip_previous.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_skip_previous.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_skip_next.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_skip_next.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_subtitle_on.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_subtitle_on.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_repeat_one.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_repeat_one.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_pause_circle_filled.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_pause_circle_filled.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_audiotrack.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_audiotrack.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/ic_other_sign_in.xml",
+        "source": "com.example.buswatch.admin-credentials-1.2.0-rc01-29:/drawable-anydpi-v21/ic_other_sign_in.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_settings.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_settings.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_stop.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_stop.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_fullscreen_exit.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_fullscreen_exit.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_fullscreen_enter.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_fullscreen_enter.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_repeat_off.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_repeat_off.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_next.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_next.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_forward.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_forward.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_shuffle_on.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_shuffle_on.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_ic_chevron_left.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_ic_chevron_left.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_shuffle_off.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_shuffle_off.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_edit_mode_logo.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_edit_mode_logo.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v21/exo_icon_fullscreen_exit.xml",
+        "source": "com.example.buswatch.admin-media3-ui-1.1.1-87:/drawable-anydpi-v21/exo_icon_fullscreen_exit.xml"
+    }
+]

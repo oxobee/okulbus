@@ -1,0 +1,57 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:3:5-42
+		INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:6:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:8:22-76
+queries
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:10:5-15:15
+package#com.google.android.gms
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:11:9-58
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:11:18-55
+intent#action:name:com.google.android.gms.plus.action.QUICK_LOOKUP
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:12:9-14:18
+action#com.google.android.gms.plus.action.QUICK_LOOKUP
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:13:13-86
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:13:21-83
+application
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:17:5-24:19
+	android:supportsRtl
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:19:9-35
+	android:allowBackup
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:18:9-35
+activity#com.example.buswatch.driver.DriverHome
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:21:9-23:40
+	android:exported
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:23:13-37
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml:22:13-39
+uses-sdk
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/driver/src/main/AndroidManifest.xml

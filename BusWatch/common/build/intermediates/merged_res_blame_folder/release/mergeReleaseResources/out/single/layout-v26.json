@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/layout-v26/abc_screen_toolbar.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/layout-v26/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/layout-v26/mtrl_calendar_month.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/layout-v26/mtrl_calendar_month.xml"
+    }
+]

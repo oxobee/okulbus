@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout-v23/exo_player_control_rewind_button.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout-v23/exo_player_control_rewind_button.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout-v23/exo_player_control_ffwd_button.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout-v23/exo_player_control_ffwd_button.xml"
+    }
+]

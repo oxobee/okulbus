@@ -1,0 +1,1282 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_expand_more_22px.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_expand_more_22px.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_info_icon_selected.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_info_icon_selected.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_btn_check_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/map2.jpg",
+        "source": "com.example.buswatch.common-main-3:/drawable/map2.jpg"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/rectangle_shape_black.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/rectangle_shape_black.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_expand_less_22px.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_expand_less_22px.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/navto_small.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/navto_small.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/child.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/child.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_faq_item.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_faq_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_clear_black_24.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_clear_black_24.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_list_selector_holo_light.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_edittext_gray.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_edittext_gray.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_dot_red.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_dot_red.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_details_card.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_details_card.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_restore.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_restore.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_student_row.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_student_row.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_tabs_rounded_line_indicator.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_tabs_rounded_line_indicator.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_filter.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_filter.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_bottom_nav.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_bottom_nav.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_users.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_users.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_dropoff_btn.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_dropoff_btn.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_ic_calendar_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_ic_calendar_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_eta_badge.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_eta_badge.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_status_active.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_status_active.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_mtrl_chip_checked_circle.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_m3_chip_check.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_m3_chip_check.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_arrow_back_black_24.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_arrow_back_black_24.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_route.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_route.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_item_background_holo_light.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_btn_borderless_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_bus.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_bus.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_info_bg_selector.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_info_bg_selector.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/card.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/card.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/logo_buswatch.jpg",
+        "source": "com.example.buswatch.common-main-3:/drawable/logo_buswatch.jpg"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/cb_selector.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/cb_selector.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_faq_item_card.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_faq_item_card.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_cab_background_top_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/circle_shape.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/circle_shape.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_tabs_default_indicator.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_nav_home_yellow.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_nav_home_yellow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/textfield_shape.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/textfield_shape.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/rectangle_shape_gray_sharp.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/rectangle_shape_gray_sharp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_tab_container.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_tab_container.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_textfield_search_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_checked_unchecked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_checked_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_bottomsheet_drag_handle.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_bottomsheet_drag_handle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/test_level_drawable.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/test_level_drawable.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_student_row_inactive.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_student_row_inactive.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_avatar_circle.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_avatar_circle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/design_fab_background.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_tabs_line_indicator.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_tabs_line_indicator.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/rectangle_shape.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/rectangle_shape.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/rectangle_hollow_with_shadow.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/rectangle_hollow_with_shadow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/soft_corner.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/soft_corner.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_check.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_settings_input.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_settings_input.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/right.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/right.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_stop_marker_red.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_stop_marker_red.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_menu_mylocation.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/ic_menu_mylocation.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/dingdong.jpg",
+        "source": "com.example.buswatch.common-main-3:/drawable/dingdong.jpg"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_card_form.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_card_form.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/design_ic_visibility_off.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/avd_hide_password.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/avd_hide_password.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_eye.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_eye.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_dropdown_arrow.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_dropdown_arrow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_card_cream.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_card_cream.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_menu_share_mtrl_alpha.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/logo.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_sort.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_sort.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ratingbar_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_ab_back_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_change_password_btn.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_change_password_btn.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_menu_mapmode.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/ic_menu_mapmode.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_capacity_badge.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_capacity_badge.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_document_placeholder.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_document_placeholder.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/home.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/home.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/globe.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/globe.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_checkbox_checked_mtrl.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/notification_tile_bg.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/notification_action_background.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/notification_action_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/moreinfo_arrow_pressed.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/moreinfo_arrow_pressed.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_image_placeholder.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_image_placeholder.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_arrow_drop_up.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_arrow_drop_up.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_card_light_green.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_card_light_green.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/cb_checked.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/cb_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_checked_unchecked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_checked_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_info_icon_default.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_info_icon_default.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_chevron_down.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_chevron_down.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/secure.jpg",
+        "source": "com.example.buswatch.common-main-3:/drawable/secure.jpg"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/avd_show_password.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/avd_show_password.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_m3_chip_checked_circle.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_m3_chip_checked_circle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_user_bearing_icon.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_user_bearing_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_delete.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_ic_clear_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_ic_clear_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_nav_home_gray.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_nav_home_gray.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/map.jpg",
+        "source": "com.example.buswatch.common-main-3:/drawable/map.jpg"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/edit.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/edit.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_ic_menu_arrow_down_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_ic_menu_arrow_down_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_popupmenu_background.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_popupmenu_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_checked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_seekbar_thumb_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_search_api_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_cancel.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_cancel.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_greeting_card.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_greeting_card.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_nav_account.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_nav_account.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_check_white.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_check_white.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_text_light.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_back.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_check_mark.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_check_mark.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_avd_show_password.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_avd_show_password.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_student_row_picked.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_student_row_picked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/notification_bg.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/hehe.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/hehe.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_edit.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/square_shape.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/square_shape.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_cursor_drawable.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_cursor_drawable.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_mtrl_checked_circle.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_mtrl_checked_circle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bonuspack_bubble.9.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/bonuspack_bubble.9.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_unchecked_pressed.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_unchecked_pressed.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_user_icon.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_user_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_checkbox_unchecked_mtrl.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_mylocation_bg_shape.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_mylocation_bg_shape.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_radio_off_mtrl.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_seekbar_track_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_student_row_active.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_student_row_active.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/moreinfo_arrow.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/moreinfo_arrow.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_menu.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_menu.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_call_answer_video_low.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/ic_call_answer_video_low.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_settings_general.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_settings_general.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/navigation_empty_icon.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_card_black_border.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_card_black_border.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_list_selector_holo_dark.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_cab_background_internal_bg.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/view.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/view.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_btn_radio_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/zoom_out.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/zoom_out.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_button_green.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_button_green.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/map3.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/map3.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/arrow.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/arrow.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/custom_progress_bar.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/custom_progress_bar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_nav_settings.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_nav_settings.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/sidebar_item_selector.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/sidebar_item_selector.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_search.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/divider.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/divider.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_track_decoration.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_track_decoration.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/center.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/center.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_bus_marker_yellow.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_bus_marker_yellow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_user_stroke_icon.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_user_stroke_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/user.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/user.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_language_dropdown.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_language_dropdown.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_radio_on_mtrl.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_start_trip.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_start_trip.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_star_black_48dp.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_star_black_48dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_stop_marker.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_stop_marker.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_rounded_corner.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_rounded_corner.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_logout.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_logout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_clear_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_menu_cut_mtrl_alpha.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_star_half_black_48dp.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_star_half_black_48dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_faq_card.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_faq_card.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_person_placeholder.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_person_placeholder.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_placeholder.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_placeholder.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/settings.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/settings.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_popupmenu_background_overlay.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_popupmenu_background_overlay.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/telephone.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/telephone.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_arrow_drop_down.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_arrow_drop_down.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_pressed_unchecked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_pressed_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_tab_indicator_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mail.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/mail.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/previous.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/previous.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_stop_marker_blue.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_stop_marker_blue.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_moreinfo.xml",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/btn_moreinfo.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_user_icon_shadow.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_user_icon_shadow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/heart.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/heart.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_pressed.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_pressed.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_unchecked_checked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_unchecked_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_ic_edit_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_ic_edit_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_my_location.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_my_location.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_archive.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_archive.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_sos_pulse.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_sos_pulse.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_call_decline_low.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/ic_call_decline_low.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/rectangle_hollow.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/rectangle_hollow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_location.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_location.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_password_eye.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_password_eye.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_keyboard_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_keyboard_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_button_yellow_bordered.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_button_yellow_bordered.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/tooltip_frame_light.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_close.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_button_save.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_button_save.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_menu_offline.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/ic_menu_offline.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_pickup_btn.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_pickup_btn.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ratingbar_small_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/notification_bg_low.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_dialog_rounded.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_dialog_rounded.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_user_puck_icon.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_user_puck_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_checkbox_unchecked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_checkbox_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_person_add.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_person_add.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_badge_pending.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_badge_pending.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_button_accept.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_button_accept.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_text_cursor_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/tooltip_frame_dark.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_nav_home.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_nav_home.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_info.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_info.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/yans.jpg",
+        "source": "com.example.buswatch.common-main-3:/drawable/yans.jpg"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_unchecked_checked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_unchecked_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_call_decline.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/ic_call_decline.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_input_field.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_input_field.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/notification_icon_background.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_tab_active.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_tab_active.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_mtrl_arrow_circle.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_mtrl_arrow_circle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_dialog_white.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_dialog_white.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_error.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_error.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_call_answer_video.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/ic_call_answer_video.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_button_red.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_button_red.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_dialog_background.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_dialog_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_pressed_checked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_pressed_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/padlock.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/padlock.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_track.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_track.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_button_reject.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_button_reject.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_bottom_sheet_drag_handle.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_bottom_sheet_drag_handle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/logo_with_bg.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/logo_with_bg.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/spinner_border.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/spinner_border.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_checkbox_button_icon.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_checkbox_button_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_call_answer.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/ic_call_answer.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_unchecked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_go_search_api_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_nav_account_yellow.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_nav_account_yellow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_bus_logo.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_bus_logo.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_menu_compass.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/ic_menu_compass.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_btn_check_material_anim.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_btn_check_material_anim.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/next.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/next.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/design_password_eye.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/design_password_eye.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_search_black_24.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_search_black_24.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/cb_unchecked.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/cb_unchecked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_search.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_search.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_btn_radio_material_anim.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_tab_inactive.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_tab_inactive.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_split_button_chevron_avd.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_split_button_chevron_avd.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_card_black_border_active.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_card_black_border_active.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_navigation_bar_item_background.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_navigation_bar_item_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/exclamation_mark.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/exclamation_mark.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bus.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/bus.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_nav_settings_yellow.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_nav_settings_yellow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/photo_camera.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/photo_camera.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_dashboard.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_dashboard.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_user_icon_stale.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_user_icon_stale.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_item_background_holo_dark.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_clock_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_clock_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_button_yellow.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_button_yellow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_checkbox_checked.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_checkbox_checked.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_logout_btn.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_logout_btn.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_mtrl_chip_checked_black.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/design_ic_visibility.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/design_ic_visibility.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_eye_off.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_eye_off.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_sos.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_sos.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_call_answer_low.xml",
+        "source": "com.example.buswatch.common-core-1.18.0-25:/drawable/ic_call_answer_low.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_m3_chip_close.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_m3_chip_close.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_mtrl_chip_close_circle.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_launcher_background.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/reliable.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/reliable.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/rectangle_shape_gray.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/rectangle_shape_gray.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/right_arrow.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/right_arrow.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_switch_thumb_checked_pressed.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_switch_thumb_checked_pressed.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/zoom_in.png",
+        "source": "com.example.buswatch.common-osmdroid-android-6.1.20-30:/drawable/zoom_in.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_tab_underline.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_tab_underline.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_end_trip.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_end_trip.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/maplibre_popup_window_transparent.xml",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable/maplibre_popup_window_transparent.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_compass.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_compass.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_nav_active.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_nav_active.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_switch_thumb_material.xml",
+        "source": "com.example.buswatch.common-appcompat-1.7.1-53:/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bell.png",
+        "source": "com.example.buswatch.common-main-3:/drawable/bell.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/rectangle_shape_white.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/rectangle_shape_white.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_settings_security.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_settings_security.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/material_ic_menu_arrow_up_black_24dp.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/material_ic_menu_arrow_up_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/mtrl_ic_indeterminate.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/mtrl_ic_indeterminate.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/design_snackbar_background.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/abc_vector_test.xml",
+        "source": "com.example.buswatch.common-appcompat-resources-1.7.1-62:/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/bg_image_placeholder.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/bg_image_placeholder.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_add.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "com.example.buswatch.common-play-services-base-18.9.0-49:/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/m3_avd_hide_password.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/drawable/m3_avd_hide_password.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable/ic_launcher_foreground.xml",
+        "source": "com.example.buswatch.common-main-3:/drawable/ic_launcher_foreground.xml"
+    }
+]

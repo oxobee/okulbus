@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-ldpi-v4/ic_other_sign_in.png",
+        "source": "com.example.buswatch.common-credentials-1.2.0-rc01-17:/drawable-ldpi-v4/ic_other_sign_in.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-ldpi-v4/ic_passkey.png",
+        "source": "com.example.buswatch.common-credentials-1.2.0-rc01-17:/drawable-ldpi-v4/ic_passkey.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-ldpi-v4/ic_password.png",
+        "source": "com.example.buswatch.common-credentials-1.2.0-rc01-17:/drawable-ldpi-v4/ic_password.png"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/drawable-ldpi-v4/maplibre_logo_icon.png",
+        "source": "com.example.buswatch.common-android-sdk-13.5.0-13:/drawable-ldpi-v4/maplibre_logo_icon.png"
+    }
+]

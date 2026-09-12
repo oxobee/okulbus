@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v24/ic_passkey.xml",
+        "source": "com.example.buswatch.admin-credentials-1.2.0-rc01-29:/drawable-anydpi-v24/ic_passkey.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-anydpi-v24/maplibre_logo_icon.xml",
+        "source": "com.example.buswatch.admin-android-sdk-13.5.0-22:/drawable-anydpi-v24/maplibre_logo_icon.xml"
+    }
+]

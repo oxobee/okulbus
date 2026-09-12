@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Dark Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/routing"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_alignParentStart="true"
+            android:letterSpacing="0.1"
+            android:fontFamily="sans-serif-condensed"
+            android:contentDescription="@string/routing"/>
+    </RelativeLayout>
+
+    <!-- Navigation Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_tab_container"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/tabRouteList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/tab_route_list"
+            android:textColor="@color/gray_text"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:letterSpacing="0.04"
+            android:background="@drawable/bg_tab_inactive"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/tabAllRoutesMap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/tab_all_routes_map"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:letterSpacing="0.04"
+            android:background="@drawable/bg_tab_active"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp">
+
+        <!-- MapLibre MapView -->
+        <org.maplibre.android.maps.MapView
+            android:id="@+id/mapAllRoutes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Attribution Overlay -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#80FFFFFF"
+            android:elevation="2dp"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="© OpenStreetMap contributors"
+            android:textColor="#444444"
+            android:textSize="8sp"
+            tools:ignore="SmallSp" />
+
+        <!-- Locator Button -->
+        <ImageButton
+            android:id="@+id/btnMyLocation"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="#CCFFFFFF"
+            android:contentDescription="Locate Stops"
+            android:elevation="4dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_my_location"
+            app:tint="@color/black" />
+    </FrameLayout>
+
+</LinearLayout>

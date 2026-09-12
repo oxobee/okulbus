@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-v21/ic_arrow_down_24dp.xml",
+        "source": "com.example.buswatch.admin-preference-1.2.1-6:/drawable-v21/ic_arrow_down_24dp.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-v21/abc_edit_text_material.xml",
+        "source": "com.example.buswatch.admin-appcompat-1.7.1-78:/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-v21/abc_btn_colored_material.xml",
+        "source": "com.example.buswatch.admin-appcompat-1.7.1-78:/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-v21/abc_dialog_material_background.xml",
+        "source": "com.example.buswatch.admin-appcompat-1.7.1-78:/drawable-v21/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-v21/abc_list_divider_material.xml",
+        "source": "com.example.buswatch.admin-appcompat-1.7.1-78:/drawable-v21/abc_list_divider_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-v21/preference_list_divider_material.xml",
+        "source": "com.example.buswatch.admin-preference-1.2.1-6:/drawable-v21/preference_list_divider_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "com.example.buswatch.admin-appcompat-1.7.1-78:/drawable-v21/abc_action_bar_item_background_material.xml"
+    }
+]

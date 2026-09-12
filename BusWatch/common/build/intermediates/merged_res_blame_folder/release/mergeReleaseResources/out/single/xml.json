@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/xml/m3expressive_button_shape_state_list.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/xml/m3expressive_button_shape_state_list.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/xml/m3_button_group_child_size_change.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/xml/m3_button_group_child_size_change.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/xml/m3expressive_connected_buttons_inner_corner_size_state_list.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/xml/m3expressive_connected_buttons_inner_corner_size_state_list.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/xml/image_share_filepaths.xml",
+        "source": "com.example.buswatch.common-browser-1.4.0-52:/xml/image_share_filepaths.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/xml/m3_split_button_inner_corner_size_state_list.xml",
+        "source": "com.example.buswatch.common-material-1.13.0-33:/xml/m3_split_button_inner_corner_size_state_list.xml"
+    }
+]

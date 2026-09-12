@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.admin-release-2:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.example.buswatch.admin-appcompat-1.7.1-78:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.admin-release-2:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.example.buswatch.admin-appcompat-1.7.1-78:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    }
+]

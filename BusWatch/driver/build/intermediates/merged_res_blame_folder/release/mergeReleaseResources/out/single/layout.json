@@ -1,0 +1,750 @@
+[
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/maplibre_infowindow_content.xml",
+        "source": "com.example.buswatch.driver-android-sdk-13.5.0-22:/layout/maplibre_infowindow_content.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_list_fragment.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_list_fragment.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_big_media_custom.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_month.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_month.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_layout_tab_icon.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_action_bar_up_container.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_day.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_day.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_time_input.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_time_input.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_menu_item_action_area.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_timepicker.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_timepicker.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/item_pickup_row.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/item_pickup_row.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_clock_period_toggle.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_clock_period_toggle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_driver_settings.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_settings.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_vertical.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_vertical.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_media_cancel_action.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_alert_select_dialog_singlechoice.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_alert_select_dialog_singlechoice.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/m3_alert_dialog_actions.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/m3_alert_dialog_actions.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_player_control_view.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_player_control_view.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_activity_chooser_view.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/maplibre_view_image_marker.xml",
+        "source": "com.example.buswatch.driver-android-sdk-13.5.0-22:/layout/maplibre_view_image_marker.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_layout_snackbar.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_month_navigation.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_month_navigation.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_radial_view_group.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_radial_view_group.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_screen_toolbar.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_clock_display_divider.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_clock_display_divider.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/image_frame.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/image_frame.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_big_media_narrow_custom.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_media_action.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_privacy_policy.xml",
+        "source": "com.example.buswatch.driver-release-0:/layout/fragment_privacy_policy.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_header_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_header_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/m3_alert_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/m3_alert_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/bonuspack_bubble.xml",
+        "source": "com.example.buswatch.driver-osmdroid-android-6.1.20-42:/layout/bonuspack_bubble.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_dropdown.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_dropdown.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_list_menu_item_layout.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_action_mode_close_item_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_bottom_sheet_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_days_of_week.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_days_of_week.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_action.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/notification_action.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_month_labeled.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_month_labeled.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_navigation_menu_item.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_styled_sub_settings_list_item.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_styled_sub_settings_list_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_header_toggle.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_header_toggle.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_list_menu_item_radio.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_widget_checkbox.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_widget_checkbox.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/m3_alert_dialog_title.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/m3_alert_dialog_title.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_part_time.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_icon_group.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_media_custom.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_driver_account.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_account.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_alert_dialog_actions.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_alert_dialog_actions.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/fragment_driver_account.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_account.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/m3_navigation_menu_divider.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/m3_navigation_menu_divider.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_search_bar.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_search_bar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_category_material.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_category_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_screen_content_include.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_information.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_information.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_information_material.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_information_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/maplibre_attribution_list_item.xml",
+        "source": "com.example.buswatch.driver-android-sdk-13.5.0-22:/layout/maplibre_attribution_list_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_alert_select_dialog_item.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_alert_select_dialog_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/dialog_sos_confirmation.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_sos_confirmation.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_day_of_week.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_day_of_week.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_header_selection_text.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_header_selection_text.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_widget_switch.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_widget_switch.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_chip_input_combo.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_chip_input_combo.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/fragment_live_tracking.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_live_tracking.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_time_chip.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_time_chip.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_fullscreen.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_fullscreen.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/aspect_ratio_menu_item.xml",
+        "source": "com.example.buswatch.driver-cloudinary-android-ui-3.1.2-86:/layout/aspect_ratio_menu_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/select_dialog_singlechoice_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_select_dialog_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_dialog_title_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_layout_tab_text.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_cascading_menu_item_layout.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/fragment_driver_home.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_home.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/ime_secondary_split_test_activity.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/ime_secondary_split_test_activity.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_navigation_item_subheader.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_list_divider.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_list_divider.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_timepicker_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_timepicker_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/item_faq.xml",
+        "source": "com.example.buswatch.driver-release-0:/layout/item_faq.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_widget_switch_compat.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_widget_switch_compat.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_auto_complete_simple_item.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_auto_complete_simple_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_layout_snackbar_include.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_list_menu_item_checkbox.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_list_menu_item_icon.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/dialog_sos_sending.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_sos_sending.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_tooltip.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_tooltip.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/dialog_sos_confirmation.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_sos_confirmation.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_action_bar_title_item.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_recyclerview.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_recyclerview.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_dialog_edittext.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_dialog_edittext.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_navigation_item_header.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_lines_media.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_text_input_end_icon.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_text_input_end_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_timepicker_textinput_display.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_timepicker_textinput_display.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_alert_dialog_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_navigation_item_separator.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_year.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_year.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/spinner_item_small.xml",
+        "source": "com.example.buswatch.driver-release-0:/layout/spinner_item_small.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/activity_driver_home.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/activity_driver_home.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_search_view.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_search_view.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_big_media_narrow.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_track_selection_dialog.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_track_selection_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/onesignal_bgimage_notif_layout.xml",
+        "source": "com.example.buswatch.driver-notifications-5.1.25-83:/layout/onesignal_bgimage_notif_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/crop_menu_item.xml",
+        "source": "com.example.buswatch.driver-cloudinary-android-ui-3.1.2-86:/layout/crop_menu_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_big_media.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_action_menu_layout.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_clock_display.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_clock_display.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_alert_dialog_title_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_dropdown_material.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_dropdown_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_layout_snackbar.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/m3_auto_complete_simple_item.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/m3_auto_complete_simple_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/item_faq_header.xml",
+        "source": "com.example.buswatch.driver-release-0:/layout/item_faq_header.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/browser_actions_context_menu_row.xml",
+        "source": "com.example.buswatch.driver-browser-1.4.0-77:/layout/browser_actions_context_menu_row.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/fragment_driver_settings.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_settings.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_text_input_date_range.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_text_input_date_range.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/dialog_student_medical_info.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_student_medical_info.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_custom_big.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/dialog_sos_sending.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_sos_sending.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_material.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_text_input_date.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_text_input_date.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/spinner_item.xml",
+        "source": "com.example.buswatch.driver-release-0:/layout/spinner_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/dialog_student_medical_info.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_student_medical_info.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_actions.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_actions.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_textinput_timepicker.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_textinput_timepicker.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_action_mode_bar.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_action_tombstone.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/fragment_driver_afternoon.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_afternoon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_player_view.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_player_view.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_header_title_text.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_header_title_text.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_styled_settings_list.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_styled_settings_list.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/item_pickup_row.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/item_pickup_row.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/select_dialog_multichoice_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/ime_base_split_test_activity.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/ime_base_split_test_activity.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_clockface_view.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_clockface_view.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_popup_menu_item_layout.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_bottom_navigation_item.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/custom_dialog.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_horizontal.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_horizontal.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/m3_side_sheet_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/m3_side_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_crop_rotate.xml",
+        "source": "com.example.buswatch.driver-cloudinary-android-ui-3.1.2-86:/layout/fragment_crop_rotate.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_picker_header_fullscreen.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_picker_header_fullscreen.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_widget_seekbar.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_widget_seekbar.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_alert_dialog.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_alert_dialog.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_styled_settings_list_item.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_styled_settings_list_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_action_menu_item_layout.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_driver_home.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_home.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_navigation_menu.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_part_chronometer.xml",
+        "source": "com.example.buswatch.driver-core-1.18.0-35:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_expanded_menu_layout.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/item_student_row.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/item_student_row.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_navigation_rail_item.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_navigation_rail_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/thumbnail_list_item.xml",
+        "source": "com.example.buswatch.driver-cloudinary-android-ui-3.1.2-86:/layout/thumbnail_list_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/material_clockface_textview.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/material_clockface_textview.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_navigation_item.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/expand_button.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/expand_button.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_upload_widget.xml",
+        "source": "com.example.buswatch.driver-cloudinary-android-ui-3.1.2-86:/layout/fragment_upload_widget.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/activity_upload_widget.xml",
+        "source": "com.example.buswatch.driver-cloudinary-android-ui-3.1.2-86:/layout/activity_upload_widget.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_category.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_category.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/browser_actions_context_menu_page.xml",
+        "source": "com.example.buswatch.driver-browser-1.4.0-77:/layout/browser_actions_context_menu_page.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/exo_legacy_player_control_view.xml",
+        "source": "com.example.buswatch.driver-media3-ui-1.1.1-87:/layout/exo_legacy_player_control_view.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/notification_template_media.xml",
+        "source": "com.example.buswatch.driver-media-1.6.0-60:/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_terms_conditions.xml",
+        "source": "com.example.buswatch.driver-release-0:/layout/fragment_terms_conditions.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_live_tracking.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_live_tracking.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_layout_snackbar_include.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/item_student_row.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/item_student_row.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/m3_navigation_menu_subheader.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/m3_navigation_menu_subheader.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/select_dialog_item_material.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_calendar_months.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_calendar_months.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_alert_select_dialog_multichoice.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_alert_select_dialog_multichoice.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/activity_driver_home.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/activity_driver_home.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-mergeReleaseResources-2:/layout/dialog_delete_account.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_delete_account.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_driver_afternoon.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/fragment_driver_afternoon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/preference_widget_seekbar_material.xml",
+        "source": "com.example.buswatch.driver-preference-1.2.1-6:/layout/preference_widget_seekbar_material.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/dialog_delete_account.xml",
+        "source": "com.example.buswatch.driver-main-4:/layout/dialog_delete_account.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/mtrl_alert_dialog_title.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/mtrl_alert_dialog_title.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/fragment_faq.xml",
+        "source": "com.example.buswatch.driver-release-0:/layout/fragment_faq.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/design_text_input_start_icon.xml",
+        "source": "com.example.buswatch.driver-material-1.13.0-49:/layout/design_text_input_start_icon.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_screen_simple.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "com.example.buswatch.driver-release-3:/layout/abc_search_view.xml",
+        "source": "com.example.buswatch.driver-appcompat-1.7.1-78:/layout/abc_search_view.xml"
+    }
+]

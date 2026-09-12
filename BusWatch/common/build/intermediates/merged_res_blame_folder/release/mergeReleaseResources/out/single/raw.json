@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.buswatch.common-release-2:/raw/consumer_onesignal_keep.xml",
+        "source": "com.example.buswatch.common-notifications-5.1.25-58:/raw/consumer_onesignal_keep.xml"
+    },
+    {
+        "merged": "com.example.buswatch.common-release-2:/raw/firebase_common_keep.xml",
+        "source": "com.example.buswatch.common-firebase-common-22.0.1-36:/raw/firebase_common_keep.xml"
+    }
+]

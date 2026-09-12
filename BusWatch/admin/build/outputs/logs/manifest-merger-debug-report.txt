@@ -1,0 +1,46 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:2:1-17:12
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:2:1-17:12
+	package
+		INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:6:22-78
+application
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:8:5-15:19
+	android:supportsRtl
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:10:9-35
+	android:allowBackup
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:9:9-35
+activity#com.example.buswatch.admin.MainActivity
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:11:9-13:39
+	android:exported
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:13:13-36
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:12:13-41
+activity#com.example.buswatch.admin.AdminHome
+ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:14:9-72
+	android:exported
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:14:45-69
+	android:name
+		ADDED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml:14:19-44
+uses-sdk
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml
+INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ugurugurlu/.gemini/antigravity/scratch/okulbus/BusWatch/admin/src/main/AndroidManifest.xml
