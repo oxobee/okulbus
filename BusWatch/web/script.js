@@ -1,7 +1,7 @@
 // Okulbus Akıllı Servis Takip ve Yönetim Sistemi
-// Frontend State & Simulation Engine
+// Frontend State, Simulation & Real Management (CRUD) Engine
 
-// 1. DEMO HESAP VERİLERİ
+// 1. DEMO HESAP TANIMLARI
 const DEMO_ACCOUNTS = {
     admin: {
         role: 'admin',
@@ -27,8 +27,8 @@ const DEMO_ACCOUNTS = {
     }
 };
 
-// 2. SERVİS FİLOSU VERİLERİ (İSTANBUL GÜZERGAHLARI)
-const FLEET_DATA = [
+// 2. SERVİS FİLOSU VERİLERİ (VARSAYILAN & LOCALSTORAGE)
+const DEFAULT_FLEET = [
     { plate: '34 OKL 001', driver: 'Mehmet Kaptan', phone: '0532 111 22 33', route: 'Kadıköy - Ataşehir', cap: '22/22', speed: '38 km/s', status: 'Yolda', lat: 40.9930, lng: 29.1120 },
     { plate: '34 OKL 002', driver: 'Ali Yıldız', phone: '0533 222 33 44', route: 'Üsküdar - Çamlıca', cap: '18/20', speed: '42 km/s', status: 'Yolda', lat: 41.0250, lng: 29.0450 },
     { plate: '34 OKL 003', driver: 'Hasan Aksoy', phone: '0535 333 44 55', route: 'Maltepe - Bostancı', cap: '24/24', speed: '0 km/s', status: 'Durakta', lat: 40.9420, lng: 29.1450 },
@@ -39,19 +39,31 @@ const FLEET_DATA = [
     { plate: '34 OKL 008', driver: 'Burak Arslan', phone: '0541 888 99 00', route: 'Beykoz - Kavacık', cap: '15/18', speed: '32 km/s', status: 'Yolda', lat: 41.0920, lng: 29.0950 }
 ];
 
-// 3. ÖĞRENCİ LİSTESİ VERİSİ
-let STUDENTS_DATA = [
-    { id: 1, name: 'Ahmet Yılmaz', grade: '4-B', bus: '34 OKL 001', stop: 'Ataşehir Migros Durağı', parentPhone: '0532 999 11 22', status: 'Bindi (07:42)' },
-    { id: 2, name: 'Elif Demir', grade: '3-A', bus: '34 OKL 001', stop: 'Batı Ataşehir Konutları', parentPhone: '0533 888 22 33', status: 'Bindi (07:46)' },
-    { id: 3, name: 'Can Öztürk', grade: '5-C', bus: '34 OKL 001', stop: 'Ataşehir Bulvarı', parentPhone: '0535 777 33 44', status: 'Bekleniyor' },
-    { id: 4, name: 'Zeynep Kaya', grade: '2-B', bus: '34 OKL 001', stop: 'Brandium Durağı', parentPhone: '0536 666 44 55', status: 'Bekleniyor' },
-    { id: 5, name: 'Emre Şen', grade: '6-A', bus: '34 OKL 001', stop: 'İçerenköy Çıkışı', parentPhone: '0537 555 55 66', status: 'Bindi (07:35)' },
-    { id: 6, name: 'Buse Aydın', grade: '1-A', bus: '34 OKL 002', stop: 'Kısıklı Meydan', parentPhone: '0538 444 66 77', status: 'Bindi (07:40)' },
-    { id: 7, name: 'Mert Aktaş', grade: '7-B', bus: '34 OKL 003', stop: 'Bostancı İskele', parentPhone: '0539 333 77 88', status: 'Bindi (07:38)' },
-    { id: 8, name: 'Yağmur Koç', grade: '4-C', bus: '34 OKL 004', stop: 'Madenler Meydan', parentPhone: '0540 222 88 99', status: 'Bindi (07:44)' }
+let FLEET_DATA = JSON.parse(localStorage.getItem('okulbus_fleet')) || DEFAULT_FLEET;
+
+function saveFleet() {
+    localStorage.setItem('okulbus_fleet', JSON.stringify(FLEET_DATA));
+}
+
+// 3. ÖĞRENCİ LİSTESİ VERİLERİ (VARSAYILAN & LOCALSTORAGE)
+const DEFAULT_STUDENTS = [
+    { id: 1, name: 'Ahmet Yılmaz', grade: '4-B', bus: '34 OKL 001', stop: 'Ataşehir Migros Durağı', parentName: 'Selin Yılmaz', parentPhone: '0532 999 11 22', status: 'Bindi (07:42)' },
+    { id: 2, name: 'Elif Demir', grade: '3-A', bus: '34 OKL 001', stop: 'Batı Ataşehir Konutları', parentName: 'Fatma Demir', parentPhone: '0533 888 22 33', status: 'Bindi (07:46)' },
+    { id: 3, name: 'Can Öztürk', grade: '5-C', bus: '34 OKL 001', stop: 'Ataşehir Bulvarı', parentName: 'Tolga Öztürk', parentPhone: '0535 777 33 44', status: 'Bekleniyor' },
+    { id: 4, name: 'Zeynep Kaya', grade: '2-B', bus: '34 OKL 001', stop: 'Brandium Durağı', parentName: 'Merve Kaya', parentPhone: '0536 666 44 55', status: 'Bekleniyor' },
+    { id: 5, name: 'Emre Şen', grade: '6-A', bus: '34 OKL 001', stop: 'İçerenköy Çıkışı', parentName: 'Gökhan Şen', parentPhone: '0537 555 55 66', status: 'Bindi (07:35)' },
+    { id: 6, name: 'Buse Aydın', grade: '1-A', bus: '34 OKL 002', stop: 'Kısıklı Meydan', parentName: 'Nur Aydın', parentPhone: '0538 444 66 77', status: 'Bindi (07:40)' },
+    { id: 7, name: 'Mert Aktaş', grade: '7-B', bus: '34 OKL 003', stop: 'Bostancı İskele', parentName: 'Hakan Aktaş', parentPhone: '0539 333 77 88', status: 'Bindi (07:38)' },
+    { id: 8, name: 'Yağmur Koç', grade: '4-C', bus: '34 OKL 004', stop: 'Madenler Meydan', parentName: 'Pınar Koç', parentPhone: '0540 222 88 99', status: 'Bindi (07:44)' }
 ];
 
-// 4. ŞOFÖR PORTALI DURAK LİSTESİ
+let STUDENTS_DATA = JSON.parse(localStorage.getItem('okulbus_students')) || DEFAULT_STUDENTS;
+
+function saveStudents() {
+    localStorage.setItem('okulbus_students', JSON.stringify(STUDENTS_DATA));
+}
+
+// 4. ŞOFÖR DURAK GÜZERGAHI
 const DRIVER_STOPS = [
     { title: '1. Kadıköy Rıhtım Kalkış', time: '07:15', done: true },
     { title: '2. Kozyatağı E-5 Durağı', time: '07:30', done: true },
@@ -61,12 +73,12 @@ const DRIVER_STOPS = [
     { title: '6. Okul Kampüsü Varış', time: '08:15', done: false }
 ];
 
-// GLOBAL DEĞİŞKENLER
+// GLOBAL INSTANCES
 let currentRole = null;
 let adminMapInstance = null;
 let driverMapInstance = null;
 let parentMapInstance = null;
-let movingMarker = null;
+let mapMarkers = [];
 
 // ==========================================
 // TOAST BİLDİRİM FONKSİYONU
@@ -103,15 +115,12 @@ function quickLogin(role) {
     const account = DEMO_ACCOUNTS[role];
     currentRole = role;
 
-    // Arayüzü güncelle
     document.getElementById('landingView').style.display = 'none';
     document.getElementById('dashboardView').style.display = 'block';
 
-    // Üst bar kimlik bilgisi
     document.getElementById('currentRoleTag').innerText = account.title.toUpperCase();
     document.getElementById('currentUserEmail').innerText = account.email;
 
-    // Navbar butonunu güncelle
     document.getElementById('navAuthArea').innerHTML = `
         <div class="user-pill" onclick="quickLogin('${role}')">
             <span class="user-pill-dot"></span>
@@ -122,7 +131,6 @@ function quickLogin(role) {
         </button>
     `;
 
-    // İlgili paneli göster
     document.querySelectorAll('.role-panel').forEach(p => p.style.display = 'none');
     
     if (role === 'admin') {
@@ -181,7 +189,6 @@ function logout() {
 
 function showLandingView() {
     if (currentRole) {
-        // Oturum açıksa kullanıcıya seçenek sun
         const res = confirm('Giriş yapmış durumdasınız. Ana sayfaya dönmek istiyor musunuz? Panel oturumunuz korunur.');
         if (!res) return;
     }
@@ -213,14 +220,20 @@ window.addEventListener('click', (e) => {
             menu.classList.remove('show');
         }
     }
+    // Modalların dışına tıklanınca kapanması
+    if (e.target.classList.contains('modal-overlay')) {
+        e.target.style.display = 'none';
+    }
 });
 
 // ==========================================
-// 1. ADMIN DASHBOARD BAŞLATMA
+// 1. ADMIN DASHBOARD & CRUD MANTIĞI
 // ==========================================
 function initAdminDashboard() {
     renderAdminFleetTable();
     renderAdminStudentTable();
+    updateKpiCounters();
+    populateBusSelect();
 
     setTimeout(() => {
         if (!adminMapInstance) {
@@ -239,30 +252,49 @@ function initAdminDashboard() {
             L.marker([41.0150, 29.0850], { icon: schoolIcon }).addTo(adminMapInstance)
                 .bindPopup('<strong>Ana Okul Kampüsü</strong><br>Servislerin Varış Noktası');
 
-            // 14 Servis Aracı İşaretçileri
-            FLEET_DATA.forEach(bus => {
-                const busIcon = L.divIcon({
-                    className: 'custom-map-marker bus-marker',
-                    html: `<div class="marker-pin bus-pin"><i class="fas fa-bus"></i></div><div class="marker-label">${bus.plate}</div>`,
-                    iconSize: [35, 35],
-                    iconAnchor: [17, 17]
-                });
-                
-                L.marker([bus.lat, bus.lng], { icon: busIcon }).addTo(adminMapInstance)
-                    .bindPopup(`
-                        <div style="font-family: Poppins, sans-serif; font-size: 13px;">
-                            <strong style="color: #2D2D2D; font-size: 14px;">🚌 ${bus.plate}</strong><br>
-                            <strong>Sürücü:</strong> ${bus.driver} (${bus.phone})<br>
-                            <strong>Güzergah:</strong> ${bus.route}<br>
-                            <strong>Hız:</strong> <span style="color: #10B981; font-weight: 600;">${bus.speed}</span><br>
-                            <strong>Doluluk:</strong> ${bus.cap}
-                        </div>
-                    `);
-            });
+            renderAdminMapMarkers();
         } else {
             adminMapInstance.invalidateSize();
+            renderAdminMapMarkers();
         }
     }, 300);
+}
+
+function renderAdminMapMarkers() {
+    if (!adminMapInstance) return;
+
+    // Önceki işaretçileri temizle
+    mapMarkers.forEach(m => adminMapInstance.removeLayer(m));
+    mapMarkers = [];
+
+    FLEET_DATA.forEach(bus => {
+        const busIcon = L.divIcon({
+            className: 'custom-map-marker bus-marker',
+            html: `<div class="marker-pin bus-pin"><i class="fas fa-bus"></i></div><div class="marker-label">${bus.plate}</div>`,
+            iconSize: [35, 35],
+            iconAnchor: [17, 17]
+        });
+        
+        const m = L.marker([bus.lat, bus.lng], { icon: busIcon }).addTo(adminMapInstance)
+            .bindPopup(`
+                <div style="font-family: Poppins, sans-serif; font-size: 13px;">
+                    <strong style="color: #2D2D2D; font-size: 14px;">🚌 ${bus.plate}</strong><br>
+                    <strong>Sürücü:</strong> ${bus.driver} (${bus.phone})<br>
+                    <strong>Güzergah:</strong> ${bus.route}<br>
+                    <strong>Hız:</strong> <span style="color: #10B981; font-weight: 600;">${bus.speed}</span><br>
+                    <strong>Doluluk:</strong> ${bus.cap}
+                </div>
+            `);
+        mapMarkers.push(m);
+    });
+}
+
+function updateKpiCounters() {
+    const busKpi = document.querySelector('.kpi-bus + .kpi-content .kpi-val');
+    if (busKpi) busKpi.innerText = `${FLEET_DATA.length} / ${FLEET_DATA.length}`;
+
+    const studentKpi = document.querySelector('.kpi-students + .kpi-content .kpi-val');
+    if (studentKpi) studentKpi.innerText = `${300 + STUDENTS_DATA.length}`;
 }
 
 function renderAdminFleetTable() {
@@ -278,9 +310,14 @@ function renderAdminFleetTable() {
             <td><span class="text-green font-bold">${bus.speed}</span></td>
             <td><span class="status-badge ${bus.status === 'Yolda' ? 'status-moving' : 'status-waiting'}"><i class="fas fa-circle"></i> ${bus.status}</span></td>
             <td>
-                <button class="btn-table-action" onclick="focusBusOnAdminMap(${bus.lat}, ${bus.lng}, '${bus.plate}')">
-                    <i class="fas fa-search-location"></i> İzle
-                </button>
+                <div style="display: flex; gap: 6px;">
+                    <button class="btn-table-action" onclick="focusBusOnAdminMap(${bus.lat}, ${bus.lng}, '${bus.plate}')" title="Haritada Odakla">
+                        <i class="fas fa-search-location"></i> İzle
+                    </button>
+                    <button class="btn-table-delete" onclick="deleteBus('${bus.plate}')" title="Servisi Sil">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
             </td>
         </tr>
     `).join('');
@@ -316,6 +353,11 @@ function renderAdminStudentTable(filter = '') {
                     <i class="fas ${s.status.startsWith('Bindi') ? 'fa-check' : 'fa-clock'}"></i> ${s.status}
                 </span>
             </td>
+            <td>
+                <button class="btn-table-delete" onclick="deleteStudent(${s.id})" title="Öğrenciyi Sil">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </td>
         </tr>
     `).join('');
 }
@@ -323,6 +365,125 @@ function renderAdminStudentTable(filter = '') {
 function filterStudentList() {
     const query = document.getElementById('studentSearchInput').value;
     renderAdminStudentTable(query);
+}
+
+// ==========================================
+// MODALLAR & CRUD EYLEMLERİ
+// ==========================================
+function openAddBusModal() {
+    document.getElementById('modalAddBus').style.display = 'flex';
+}
+
+function openAddStudentModal() {
+    populateBusSelect();
+    document.getElementById('modalAddStudent').style.display = 'flex';
+}
+
+function closeModal(modalId) {
+    const el = document.getElementById(modalId);
+    if (el) el.style.display = 'none';
+}
+
+function populateBusSelect() {
+    const sel = document.getElementById('studentBusSelect');
+    if (!sel) return;
+    sel.innerHTML = FLEET_DATA.map(b => `<option value="${b.plate}">${b.plate} - ${b.route} (${b.driver})</option>`).join('');
+}
+
+function submitAddBus(e) {
+    e.preventDefault();
+    const plate = document.getElementById('busPlateInput').value.trim().toUpperCase();
+    const driver = document.getElementById('busDriverInput').value.trim();
+    const phone = document.getElementById('busPhoneInput').value.trim();
+    const route = document.getElementById('busRouteInput').value.trim();
+    const cap = document.getElementById('busCapInput').value.trim();
+    const speed = document.getElementById('busSpeedInput').value.trim() || '35 km/s';
+
+    if (FLEET_DATA.some(b => b.plate === plate)) {
+        showToast('Bu plakaya sahip bir servis zaten mevcut!', 'error');
+        return;
+    }
+
+    // İstanbul çevresinde hafif rastgele koordinat
+    const randomOffsetLat = (Math.random() - 0.5) * 0.08;
+    const randomOffsetLng = (Math.random() - 0.5) * 0.12;
+
+    const newBus = {
+        plate,
+        driver,
+        phone,
+        route,
+        cap: `0/${cap}`,
+        speed,
+        status: 'Yolda',
+        lat: 41.0082 + randomOffsetLat,
+        lng: 29.0400 + randomOffsetLng
+    };
+
+    FLEET_DATA.push(newBus);
+    saveFleet();
+    renderAdminFleetTable();
+    updateKpiCounters();
+    populateBusSelect();
+    renderAdminMapMarkers();
+
+    closeModal('modalAddBus');
+    e.target.reset();
+    showToast(`✅ ${plate} plakalı servis ve şoför ${driver} sisteme başarıyla eklendi!`, 'success');
+}
+
+function submitAddStudent(e) {
+    e.preventDefault();
+    const name = document.getElementById('studentNameInput').value.trim();
+    const grade = document.getElementById('studentGradeInput').value.trim();
+    const bus = document.getElementById('studentBusSelect').value;
+    const stop = document.getElementById('studentStopInput').value.trim();
+    const parentName = document.getElementById('parentNameInput').value.trim();
+    const parentPhone = document.getElementById('parentPhoneInput').value.trim();
+
+    const newStudent = {
+        id: Date.now(),
+        name,
+        grade,
+        bus,
+        stop,
+        parentName,
+        parentPhone,
+        status: 'Bekleniyor'
+    };
+
+    STUDENTS_DATA.push(newStudent);
+    saveStudents();
+    renderAdminStudentTable();
+    updateKpiCounters();
+    if (currentRole === 'driver') renderDriverAttendanceList();
+
+    closeModal('modalAddStudent');
+    e.target.reset();
+    showToast(`✅ ${name} (${grade}) isimli öğrenci ve velisi ${bus} hattına eklendi!`, 'success');
+}
+
+function deleteBus(plate) {
+    if (!confirm(`${plate} plakalı servisi ve şoför kaydını silmek istediğinize emin misiniz?`)) return;
+    FLEET_DATA = FLEET_DATA.filter(b => b.plate !== plate);
+    saveFleet();
+    renderAdminFleetTable();
+    updateKpiCounters();
+    populateBusSelect();
+    renderAdminMapMarkers();
+    showToast(`${plate} plakalı servis sistemden silindi.`, 'info');
+}
+
+function deleteStudent(id) {
+    const st = STUDENTS_DATA.find(s => s.id === id);
+    if (!st) return;
+    if (!confirm(`${st.name} isimli öğrenciyi listeden silmek istediğinize emin misiniz?`)) return;
+    STUDENTS_DATA = STUDENTS_DATA.filter(s => s.id !== id);
+    saveStudents();
+    renderAdminStudentTable();
+    updateKpiCounters();
+    if (currentRole === 'driver') renderDriverAttendanceList();
+    showToast(`${st.name} kaydı silindi.`, 'info');
 }
 
 // ==========================================
@@ -345,7 +506,7 @@ function initDriverDashboard() {
                 iconSize: [40, 40],
                 iconAnchor: [20, 20]
             });
-            movingMarker = L.marker([40.9930, 29.1120], { icon: busIcon }).addTo(driverMapInstance)
+            L.marker([40.9930, 29.1120], { icon: busIcon }).addTo(driverMapInstance)
                 .bindPopup('<strong>Aracınız Seyir Halinde</strong><br>Sıradaki: Ataşehir Migros Kavşağı');
 
             // Duraklar
@@ -386,7 +547,6 @@ function renderDriverAttendanceList() {
         `;
     }).join('');
 
-    // Sayacı güncelle
     const boardedCount = busStudents.filter(s => s.status.startsWith('Bindi')).length;
     const countEl = document.getElementById('driverAttendanceCount');
     if (countEl) {
@@ -407,6 +567,7 @@ function toggleStudentAttendance(id) {
         student.status = `Bindi (${timeStr})`;
         showToast(`✔️ ${student.name} servise bindi! Veliye anlık bildirim iletildi.`, 'success');
     }
+    saveStudents();
     renderDriverAttendanceList();
     if (adminMapInstance) renderAdminStudentTable();
 }
@@ -415,6 +576,7 @@ function markStudentAbsent(id) {
     const student = STUDENTS_DATA.find(s => s.id === id);
     if (!student) return;
     student.status = 'Gelmedi (Bildirildi)';
+    saveStudents();
     showToast(`⚠️ ${student.name} gelmedi olarak işaretlendi.`, 'info');
     renderDriverAttendanceList();
     if (adminMapInstance) renderAdminStudentTable();
@@ -471,7 +633,7 @@ function initParentDashboard() {
                 iconSize: [42, 42],
                 iconAnchor: [21, 21]
             });
-            const pMarker = L.marker([40.9910, 29.1090], { icon: busIcon }).addTo(parentMapInstance)
+            L.marker([40.9910, 29.1090], { icon: busIcon }).addTo(parentMapInstance)
                 .bindPopup('<strong>34 OKL 001</strong><br>Sürücü: Mehmet Kaptan<br>Hız: 36 km/s<br><strong>Yaklaşık 5 dakika içinde kapınızda!</strong>')
                 .openPopup();
 
@@ -490,7 +652,6 @@ function initParentDashboard() {
 
 // SAYFA YÜKLENDİĞİNDE
 document.addEventListener('DOMContentLoaded', () => {
-    // URL parametresinde role var mı kontrol et (örn: ?role=admin)
     const urlParams = new URLSearchParams(window.location.search);
     const roleParam = urlParams.get('role');
     if (roleParam && DEMO_ACCOUNTS[roleParam]) {

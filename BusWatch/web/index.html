@@ -332,9 +332,11 @@
             <div class="panel-section-card">
                 <div class="section-card-header">
                     <h3><i class="fas fa-list"></i> Servis Araçları & Sürücü Durumları</h3>
-                    <button class="btn-action-small" onclick="showToast('Yeni servis ekleme formu demo modunda pasiftir.', 'info')">
-                        <i class="fas fa-plus"></i> Yeni Servis Ekle
-                    </button>
+                    <div class="header-actions-group">
+                        <button class="btn-action-primary" onclick="openAddBusModal()">
+                            <i class="fas fa-plus-circle"></i> Yeni Servis & Şoför Ekle
+                        </button>
+                    </div>
                 </div>
                 <div class="table-responsive">
                     <table class="dash-table">
@@ -347,7 +349,7 @@
                                 <th>Kapasite</th>
                                 <th>Hız</th>
                                 <th>Canlı Durum</th>
-                                <th>İşlem</th>
+                                <th>İşlemler</th>
                             </tr>
                         </thead>
                         <tbody id="adminBusesTbody">
@@ -361,7 +363,12 @@
             <div class="panel-section-card">
                 <div class="section-card-header">
                     <h3><i class="fas fa-user-friends"></i> Öğrenci Servis Kayıtları & Biniş Durumu</h3>
-                    <input type="text" id="studentSearchInput" class="table-search" placeholder="Öğrenci veya servis ara..." onkeyup="filterStudentList()">
+                    <div class="header-actions-group">
+                        <input type="text" id="studentSearchInput" class="table-search" placeholder="Öğrenci veya servis ara..." onkeyup="filterStudentList()">
+                        <button class="btn-action-primary" onclick="openAddStudentModal()">
+                            <i class="fas fa-user-plus"></i> Yeni Öğrenci Ekle
+                        </button>
+                    </div>
                 </div>
                 <div class="table-responsive">
                     <table class="dash-table">
@@ -373,6 +380,7 @@
                                 <th>Durağı</th>
                                 <th>Veli İletişim</th>
                                 <th>Sabah Biniş Durumu</th>
+                                <th>İşlem</th>
                             </tr>
                         </thead>
                         <tbody id="adminStudentsTbody">
@@ -571,6 +579,100 @@
             <p>Öğrenci Güvenliği, Canlı GPS ve Rota Takip Çözümleri.</p>
         </div>
     </footer>
+
+    <!-- ============================================== -->
+    <!-- MODALLAR (YENİ SERVİS / ÖĞRENCİ / DURAK EKLEME) -->
+    <!-- ============================================== -->
+    
+    <!-- 1. YENİ SERVİS / ŞOFÖR EKLEME MODALI -->
+    <div id="modalAddBus" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fas fa-bus text-yellow"></i> Yeni Servis Aracı & Şoför Ekle</h3>
+                <button class="modal-close" onclick="closeModal('modalAddBus')">&times;</button>
+            </div>
+            <form onsubmit="submitAddBus(event)">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><i class="fas fa-id-card"></i> Araç Plakası *</label>
+                        <input type="text" id="busPlateInput" placeholder="Örn: 34 OKL 015" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-user-tie"></i> Sürücü Adı Soyadı *</label>
+                        <input type="text" id="busDriverInput" placeholder="Örn: Fatih Demir" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Sürücü Telefon Numarası *</label>
+                        <input type="tel" id="busPhoneInput" placeholder="Örn: 0532 111 22 33" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-route"></i> Güzergah / Hat Tanımı *</label>
+                        <input type="text" id="busRouteInput" placeholder="Örn: Çekmeköy - Kadıköy Hattı" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 1;">
+                            <label><i class="fas fa-users"></i> Kapasite (Koltuk)</label>
+                            <input type="number" id="busCapInput" value="22" min="10" max="60" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label><i class="fas fa-tachometer-alt"></i> Başlangıç Hızı</label>
+                            <input type="text" id="busSpeedInput" value="35 km/s">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modalAddBus')">İptal</button>
+                    <button type="submit" class="btn btn-primary-modal"><i class="fas fa-check"></i> Servisi Sisteme Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. YENİ ÖĞRENCİ & VELİ EKLEME MODALI -->
+    <div id="modalAddStudent" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-graduate text-yellow"></i> Yeni Öğrenci & Veli Kaydı</h3>
+                <button class="modal-close" onclick="closeModal('modalAddStudent')">&times;</button>
+            </div>
+            <form onsubmit="submitAddStudent(event)">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Öğrenci Adı Soyadı *</label>
+                        <input type="text" id="studentNameInput" placeholder="Örn: Kerem Yıldırım" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 1;">
+                            <label><i class="fas fa-graduation-cap"></i> Sınıf / Şube *</label>
+                            <input type="text" id="studentGradeInput" placeholder="Örn: 3-A" required>
+                        </div>
+                        <div class="form-group" style="flex: 2;">
+                            <label><i class="fas fa-bus"></i> Atanacak Servis Hattı *</label>
+                            <select id="studentBusSelect" class="form-select" required>
+                                <!-- JS ile dinamik dolacak -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Biniş / İniş Durağı *</label>
+                        <input type="text" id="studentStopInput" placeholder="Örn: Ataşehir Migros Durağı" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-user-friends"></i> Veli Adı Soyadı *</label>
+                        <input type="text" id="parentNameInput" placeholder="Örn: Ayşe Yıldırım" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-phone-alt"></i> Veli İletişim Telefonu *</label>
+                        <input type="tel" id="parentPhoneInput" placeholder="Örn: 0533 999 88 77" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modalAddStudent')">İptal</button>
+                    <button type="submit" class="btn btn-primary-modal"><i class="fas fa-check"></i> Öğrenciyi Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
