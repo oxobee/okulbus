@@ -1,0 +1,54 @@
+package com.example.buswatch
+
+import android.Manifest
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+
+class Load3 : AppCompatActivity() {
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { _ ->
+        // After user interacts with the permission popup, navigate to Log in
+        navigateToLogin()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.load3)
+
+        val allowButton = findViewById<Button>(R.id.btnLoad3Allow)
+        val cancelButton = findViewById<Button>(R.id.btnLoad3Cancel)
+
+        allowButton.setOnClickListener {
+            // Request location permissions
+            requestPermissionLauncher.launch(
+                arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                )
+            )
+        }
+
+        cancelButton.setOnClickListener {
+            navigateToLogin()
+        }
+    }
+
+    private fun navigateToLogin() {
+        // Mark onboarding as complete
+        val sharedPref = getSharedPreferences("onboarding", Context.MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putBoolean("isFirstRun", false)
+            apply()
+        }
+
+        val intent = Intent(this, Login::class.java)
+        startActivity(intent)
+        finish()
+    }
+}

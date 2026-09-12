@@ -1,0 +1,163 @@
+/* --- 1. Variables & Base --- */
+:root {
+    --primary: #FEBE1E;
+    --dark: #2D2D2D;
+    --cream: #FFECB3;
+    --white: #FFFFFF;
+    --text: #1A1A1A;
+    --gray: #888888;
+    --light-bg: #E1F5FE;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--primary);
+    z-index: 9999;
+}
+
+/* --- 2. Navigation --- */
+nav {
+    background: var(--dark);
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 45px; height: 45px; border-radius: 8px;
+    background: var(--primary); padding: 4px;
+}
+
+.nav-links { display: flex; gap: 30px; align-items: center; }
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.github-btn {
+    background: rgba(255,255,255,0.1);
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white !important;
+}
+
+/* --- 3. Layout --- */
+section { padding: 100px 8%; text-align: center; }
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.hero {
+    padding: 220px 8% 150px;
+    background: linear-gradient(135deg, var(--primary) 0%, #FFD54F 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    position: relative;
+}
+
+.hero h1 { font-size: 3.8rem; font-weight: 800; color: var(--dark); line-height: 1.1; }
+.hero-bus { position: absolute; bottom: 10%; right: 5%; width: 250px; opacity: 0.15; pointer-events: none; }
+
+.ui-showcase { background: var(--light-bg); }
+#team { background: var(--cream); }
+
+/* Grid Locked to 2 Columns (3x2 for 6 items) */
+.ui-grid, .team-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 40px;
+    margin-top: 50px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- 4. Cards --- */
+.ui-item, .team-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: 0.4s;
+}
+
+.ui-item:hover, .team-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+
+.screenshot {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 35px;
+    margin-bottom: 25px;
+}
+
+.team-img { width: 160px; height: 160px; border-radius: 40px; object-fit: cover; margin-bottom: 20px; border: 5px solid var(--primary); }
+
+/* --- 5. Footer --- */
+footer { padding: 80px 8% 40px; text-align: center; background: var(--dark); color: #888; }
+.footer-logo { color: var(--primary); font-size: 1.6rem; font-weight: 800; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; }
+
+/* Light Gray Footer Text */
+.footer-bottom-text {
+    margin-top: 30px;
+    color: #cccccc !important; /* Slightly light gray as requested */
+    font-size: 0.85rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* --- 6. Mobile --- */
+@media (max-width: 900px) {
+    .ui-grid, .team-grid { grid-template-columns: 1fr !important; }
+    .hero h1 { font-size: 2.5rem; }
+}

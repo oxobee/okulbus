@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_details_card"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Adding New Bus"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02"
+                app:drawableStartCompat="@drawable/ic_bus_logo"
+                android:drawablePadding="10dp" />
+
+            <ImageButton
+                android:id="@+id/btnCloseAddBus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_close"
+                android:contentDescription="Close"
+                app:tint="@color/black"/>
+        </RelativeLayout>
+
+        <!-- Bus Number Row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Bus Number" android:textColor="#444444" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text=" *" android:textColor="@color/error_red" android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+            <EditText android:id="@+id/etBusNumber"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="14sp"
+                android:inputType="textCapCharacters" android:hint="Enter bus number" android:importantForAutofill="no"/>
+        </LinearLayout>
+
+        <!-- Vehicle Type and Capacity Row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp"
+            android:baselineAligned="false">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="8dp" android:orientation="vertical">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Vehicle Type" android:textColor="#444444" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=" *" android:textColor="@color/error_red" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/btnVehicleTypeDropdown"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/rectangle_hollow_with_shadow"
+                    android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tvSelectedVehicleType"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" android:layout_marginStart="12dp"
+                        android:text="Select Type" android:textColor="#666666" android:textSize="14sp"/>
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="8dp" android:src="@drawable/ic_chevron_down" app:tint="#888888" android:contentDescription="@null"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="0.8" android:orientation="vertical">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Capacity" android:textColor="#444444" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=" *" android:textColor="@color/error_red" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <EditText android:id="@+id/etCapacity"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/rectangle_hollow_with_shadow"
+                    android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="14sp"
+                    android:inputType="number" android:hint="Qty" android:importantForAutofill="no"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Capacity Feedback -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <TextView android:id="@+id/tvCapacityLabel" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="11sp" android:textStyle="bold" android:padding="4dp"
+                android:background="@drawable/soft_corner" android:visibility="gone" android:textColor="@color/white" android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/tvCapacityWarning" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="11sp" android:textColor="@color/error_red" android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Plate Number Row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginBottom="32dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Plate Number (Optional)" android:textColor="#444444" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etPlateNumber"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="14sp"
+                android:inputType="textCapCharacters" android:hint="ABC 1234" android:maxLength="8" android:importantForAutofill="no"/>
+        </LinearLayout>
+
+        <!-- SAVE -->
+        <TextView
+            android:id="@+id/btnSaveBus"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="SAVE BUS"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:letterSpacing="0.08"
+            android:background="@drawable/bg_button_yellow"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>

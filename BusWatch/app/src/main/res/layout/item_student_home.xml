@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/studentCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_card_black_border"
+    android:padding="16dp"
+    android:elevation="2dp">
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/imgStudent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_avatar_circle"
+        android:contentDescription="@string/student_avatar"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/user" />
+
+    <!-- Status Badge -->
+    <TextView
+        android:id="@+id/tvStudentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_button_yellow"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="3dp"
+        tools:text="@string/at_home"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- Student Info -->
+    <LinearLayout
+        android:id="@+id/studentInfoContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/imgStudent"
+        android:layout_toStartOf="@id/tvStudentStatus"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/justin_wilson"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStudentGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/grade_1"
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:background="@drawable/bg_tab_underline"
+            android:paddingBottom="1dp" />
+
+        <TextView
+            android:id="@+id/tvStudentSchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            tools:text="@string/the_immaculate_mother_academy_inc"
+            android:textColor="#444444"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvStudentStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            tools:text="Stop: Main Gate"
+            android:textColor="#444444"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Options Section -->
+    <LinearLayout
+        android:id="@+id/optionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentInfoContainer"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/studentInfoContainer"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ride_option"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <FrameLayout
+            android:layout_width="170dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp">
+
+            <Spinner
+                android:id="@+id/spinnerRideOption"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/spinner_border"
+                android:paddingEnd="24dp"
+                android:spinnerMode="dropdown"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvRideOptionValue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="Round Trip"
+                android:gravity="center_vertical" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Right Arrow Indicator -->
+    <ImageView
+        android:id="@+id/ivArrowIndicator"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_chevron_down"
+        android:rotation="-90"
+        app:tint="#888888"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:contentDescription="@string/go_to_tracking" />
+
+</RelativeLayout>

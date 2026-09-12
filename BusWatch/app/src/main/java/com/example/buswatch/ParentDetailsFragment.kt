@@ -1,0 +1,779 @@
+package com.example.buswatch
+
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.location.Geocoder
+import android.location.Location
+import android.net.Uri
+import android.os.Build
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.FrameLayout
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
+import androidx.core.graphics.toColorInt
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.cloudinary.android.MediaManager
+import com.cloudinary.android.callback.ErrorInfo
+import com.cloudinary.android.callback.UploadCallback
+import com.example.buswatch.common.MapUtils
+import com.example.buswatch.common.R as CommonR
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.SetOptions
+import org.maplibre.android.MapLibre
+import org.maplibre.android.camera.CameraUpdateFactory
+import org.maplibre.android.geometry.LatLng
+import org.maplibre.android.maps.MapLibreMap
+import org.maplibre.android.maps.MapView
+import org.maplibre.android.maps.Style
+import org.maplibre.android.style.layers.Property
+import org.maplibre.android.style.layers.PropertyFactory
+import org.maplibre.android.style.layers.SymbolLayer
+import org.maplibre.android.style.sources.GeoJsonSource
+import org.maplibre.geojson.Feature
+import org.maplibre.geojson.Point
+import java.io.File
+import java.util.Locale
+import kotlin.collections.Map as KMap
+
+class ParentDetailsFragment : Fragment() {
+    private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
+    private var childrenList = mutableListOf<ChildDetail>()
+    private lateinit var adapter: DetailsChildAdapter
+    private var isDeleteMode = false
+
+    private var parentListener: ListenerRegistration? = null
+
+    private var tempAvatarUri: Uri? = null
+
+    private var dialogAvatarView: ImageView? = null
+    private var tvPhotoRequired: TextView? = null
+    private var selectedLatitude: Double? = null
+    private var selectedLongitude: Double? = null
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
+
+    private var etAddChildAddress: EditText? = null
+    
+    private var mapLibreMap: MapLibreMap? = null
+    private val MARKER_SOURCE_ID = "home-marker-source"
+    private val MARKER_LAYER_ID = "home-marker-layer"
+
+    private val pickAvatarLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+        uri?.let {
+            tempAvatarUri = it
+            showPreviewDialog(it)
+        }
+    }
+
+    private val requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { _ -> }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        MapLibre.getInstance(requireContext())
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_parent_details, container, false)
+
+        auth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
+
+        view.findViewById<View>(R.id.btnParentsEdit).setOnClickListener {
+            showEditProfileDialog()
+        }
+
+        view.findViewById<ImageButton>(R.id.btnAddChild).setOnClickListener {
+            showAddChildDialog()
+        }
+
+        val btnConfirmDelete = view.findViewById<Button>(R.id.btnConfirmDeleteChildren)
+        view.findViewById<ImageButton>(R.id.btnDeleteChild).setOnClickListener {
+            if (childrenList.isEmpty()) {
+                Toast.makeText(requireContext(), "You need to add a child first before you can use the removal feature", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            isDeleteMode = !isDeleteMode
+            adapter.setDeleteMode(isDeleteMode)
+            btnConfirmDelete.visibility = if (isDeleteMode) View.VISIBLE else View.GONE
+            if (isDeleteMode) {
+                Toast.makeText(requireContext(), "Select the children you wish to remove from your list", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        btnConfirmDelete.setOnClickListener {
+            val selectedChildren = adapter.getSelectedChildren()
+            if (selectedChildren.isEmpty()) {
+                isDeleteMode = false
+                adapter.setDeleteMode(false)
+                btnConfirmDelete.visibility = View.GONE
+                Toast.makeText(requireContext(), "Removal cancelled: No children were selected", Toast.LENGTH_SHORT).show()
+            } else if (selectedChildren.size >= childrenList.size) {
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Action Restricted")
+                    .setMessage("At least one child must remain linked to your account. If you wish to replace this child, please add the new one first before removing the current one.")
+                    .setPositiveButton("OK", null)
+                    .show()
+            } else {
+                showBulkDeleteWarning(selectedChildren)
+            }
+        }
+
+        setupRecyclerView(view)
+        startParentDataListener(view)
+
+        return view
+    }
+
+    private fun setupRecyclerView(view: View) {
+        val rvChildren = view.findViewById<RecyclerView>(R.id.rvDetailsChildren)
+        rvChildren.layoutManager = LinearLayoutManager(requireContext())
+        adapter = DetailsChildAdapter(
+            childrenList,
+            onViewClick = { child ->
+                val intent = Intent(requireContext(), StudentDetailsActivity::class.java)
+                intent.putExtra("childName", child.name)
+                startActivity(intent)
+            }
+        )
+        rvChildren.adapter = adapter
+    }
+
+    private fun startParentDataListener(view: View) {
+        val uid = auth.currentUser?.uid ?: return
+
+        parentListener?.remove()
+        parentListener = db.collection("parents").document(uid)
+            .addSnapshotListener { document, e ->
+                if (e != null) {
+                    Log.w("ParentDetails", "Listen failed.", e)
+                    return@addSnapshotListener
+                }
+
+                if (isAdded && document != null && document.exists()) {
+                    @Suppress("UNCHECKED_CAST")
+                    val profile = document.get("profile") as? KMap<String, Any>
+
+                    val fName = profile?.get("firstName") as? String ?: ""
+                    val lName = profile?.get("lastName") as? String ?: ""
+                    val fullName = "$fName $lName".trim()
+
+                    view.findViewById<TextView>(R.id.tvHeaderSub).text = fullName
+                    view.findViewById<TextView>(R.id.tvParentFullName).text = fullName
+                    view.findViewById<TextView>(R.id.tvParentEmail).text = profile?.get("email") as? String ?: ""
+                    view.findViewById<TextView>(R.id.tvParentPhone).text = profile?.get("phone") as? String ?: ""
+
+                    val parentAvatarUrl = profile?.get("parentAvatarUrl") as? String ?: ""
+
+                    val ivParentAvatar = view.findViewById<ImageView>(R.id.imgParentAvatar)
+                    if (parentAvatarUrl.isNotEmpty()) {
+                        Glide.with(this)
+                            .load(parentAvatarUrl)
+                            .placeholder(CommonR.drawable.user)
+                            .error(CommonR.drawable.user)
+                            .circleCrop()
+                            .into(ivParentAvatar)
+                    } else {
+                        ivParentAvatar.setImageResource(CommonR.drawable.user)
+                    }
+
+                    val tvStatus = view.findViewById<TextView>(R.id.tvParentStatus)
+                    val status = document.getString("status") ?: "pending"
+                    tvStatus.text = status.uppercase()
+
+                    if (status.lowercase() == "approved") {
+                        tvStatus.backgroundTintList = ColorStateList.valueOf("#D4EDDA".toColorInt())
+                        tvStatus.setTextColor("#155724".toColorInt())
+                    } else {
+                        tvStatus.backgroundTintList = ColorStateList.valueOf("#FFF3CD".toColorInt())
+                        tvStatus.setTextColor("#856404".toColorInt())
+                    }
+
+                    val newChildrenList = mutableListOf<ChildDetail>()
+                    val childData = document.get("child")
+                    if (childData is KMap<*, *>) {
+                        @Suppress("UNCHECKED_CAST")
+                        newChildrenList.add(mapToChildDetail(childData as KMap<String, Any>, "primary_child"))
+                    }
+
+                    val childrenListData = document.get("children")
+                    if (childrenListData is List<*>) {
+                        childrenListData.forEachIndexed { index, item ->
+                            if (item is KMap<*, *>) {
+                                @Suppress("UNCHECKED_CAST")
+                                newChildrenList.add(mapToChildDetail(item as KMap<String, Any>, index.toString()))
+                            }
+                        }
+                    }
+
+                    childrenList = newChildrenList
+                    adapter.updateList(childrenList)
+
+                    val contactList = mutableListOf<ContactDetail>()
+                    val pPhone = profile?.get("phone") as? String ?: ""
+                    if (fullName.isNotEmpty() || pPhone.isNotEmpty()) {
+                        contactList.add(ContactDetail("Primary Parent", pPhone, fullName, "Parent"))
+                    }
+
+                    val contactsData = document.get("emergencyContacts")
+                    if (contactsData is List<*>) {
+                        contactsData.forEach { item ->
+                            if (item is KMap<*, *>) {
+                                val name = item["name"] as? String ?: ""
+                                val cPhone = item["phone"] as? String ?: ""
+                                val relationship = item["relationship"] as? String ?: ""
+                                if (name.isNotEmpty() || cPhone.isNotEmpty()) {
+                                    contactList.add(ContactDetail("Emergency Contact", cPhone, name, relationship))
+                                }
+                            }
+                        }
+                    }
+
+                    val rvContacts = view.findViewById<RecyclerView>(R.id.rvDetailsContacts)
+                    rvContacts.layoutManager = LinearLayoutManager(requireContext())
+                    rvContacts.adapter = DetailsContactAdapter(contactList)
+                }
+            }
+    }
+
+
+    private fun mapToChildDetail(map: KMap<String, Any>, id: String): ChildDetail {
+        val cfName = map["firstName"] as? String ?: ""
+        val clName = map["lastName"] as? String ?: ""
+        val cmName = map["middleName"] as? String ?: ""
+        val csuffix = map["suffix"] as? String ?: ""
+        val age = map["age"]?.toString() ?: ""
+
+        val rideOption = (map["rideOption"] as? String)?.takeIf { it.isNotBlank() } ?: "Round Trip (Morning & Afternoon)"
+        val status = if (rideOption == "Not Riding") {
+            getString(CommonR.string.status_at_home)
+        } else {
+            map["status"] as? String ?: getString(CommonR.string.status_at_home)
+        }
+
+        return ChildDetail(
+            name = "$cfName $clName".trim(),
+            grade = map["grade"] as? String ?: "",
+            school = map["school"] as? String ?: "The Immaculate Mother Academy Inc.",
+            status = status,
+            avatarUrl = map["childAvatarUrl"] as? String ?: "",
+            firstName = cfName,
+            lastName = clName,
+            middleName = cmName,
+            suffix = csuffix,
+            age = age,
+            section = map["class"] as? String ?: map["section"] as? String ?: "",
+            id = id,
+            originalData = map
+        )
+    }
+
+    private fun showAddChildDialog() {
+        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_add_child, null)
+        val dialog = AlertDialog.Builder(requireContext(), CommonR.style.CustomDialog)
+            .setView(dialogView)
+            .create()
+
+        selectedLatitude = null
+        selectedLongitude = null
+        dialogAvatarView = dialogView.findViewById(R.id.ivAddChildAvatar)
+        tvPhotoRequired = dialogView.findViewById(R.id.tvAddChildPhotoRequired)
+        etAddChildAddress = dialogView.findViewById(R.id.etAddChildAddress)
+
+        val suffixSelector = dialogView.findViewById<FrameLayout>(R.id.btnAddChildSuffix)
+        val tvSelectedSuffix = dialogView.findViewById<TextView>(R.id.tvAddChildSelectedSuffix)
+        var selectedSuffixStr = ""
+
+        suffixSelector.setOnClickListener {
+            val suffixes = arrayOf("None", "Jr.", "Sr.", "II", "III", "IV", "V")
+            AlertDialog.Builder(requireContext())
+                .setTitle("Select Suffix")
+                .setItems(suffixes) { _, pos ->
+                    selectedSuffixStr = if (pos == 0) "" else suffixes[pos]
+                    tvSelectedSuffix.text = if (pos == 0) getString(CommonR.string.suffix) else suffixes[pos]
+                    tvSelectedSuffix.setTextColor(if (pos == 0) "#888888".toColorInt() else Color.BLACK)
+                }
+                .show()
+        }
+
+        val btnGrade = dialogView.findViewById<FrameLayout>(R.id.btnAddChildGrade)
+        val tvGrade = dialogView.findViewById<TextView>(R.id.tvAddChildSelectedGrade)
+        var selectedGrade = ""
+        btnGrade.setOnClickListener {
+            val grades = arrayOf("Nursery", "Kinder", "Prep", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6")
+            AlertDialog.Builder(requireContext())
+                .setTitle("Select Grade")
+                .setItems(grades) { _, person ->
+                    selectedGrade = grades[person]
+                    tvGrade.text = selectedGrade
+                    tvGrade.setTextColor(Color.BLACK)
+                }
+                .show()
+        }
+
+        val btnBloodType = dialogView.findViewById<FrameLayout>(R.id.btnAddChildBloodType)
+        val tvBloodType = dialogView.findViewById<TextView>(R.id.tvAddChildSelectedBloodType)
+        var selectedBloodType = ""
+        btnBloodType.setOnClickListener {
+            val bloodTypes = arrayOf("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Unknown")
+            AlertDialog.Builder(requireContext())
+                .setTitle("Select Blood Type")
+                .setItems(bloodTypes) { _, person ->
+                    selectedBloodType = bloodTypes[person]
+                    tvBloodType.text = selectedBloodType
+                    tvBloodType.setTextColor(Color.BLACK)
+                }
+                .show()
+        }
+
+        val mapView = dialogView.findViewById<MapView>(R.id.mapAddChild)
+        mapView.onCreate(null)
+        mapView.getMapAsync { map ->
+            mapLibreMap = map
+            map.setStyle(Style.Builder().fromUri("https://tiles.openfreemap.org/styles/liberty")) { style ->
+                MapUtils.getScaledBitmap(requireContext(), CommonR.drawable.ic_location, 36, 36)?.let {
+                    style.addImage("marker-icon", it)
+                }
+                style.addSource(GeoJsonSource(MARKER_SOURCE_ID))
+                style.addLayer(SymbolLayer(MARKER_LAYER_ID, MARKER_SOURCE_ID).apply {
+                    setProperties(
+                        PropertyFactory.iconImage("marker-icon"),
+                        PropertyFactory.iconAllowOverlap(true),
+                        PropertyFactory.iconIgnorePlacement(true),
+                        PropertyFactory.iconAnchor(Property.ICON_ANCHOR_BOTTOM)
+                    )
+                })
+
+                val startPoint = LatLng(14.7566, 121.0450)
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(startPoint, 15.0))
+
+                map.addOnMapClickListener { latLng ->
+                    selectedLatitude = latLng.latitude
+                    selectedLongitude = latLng.longitude
+                    updateDialogMarker(latLng)
+                    getAddressFromLocation(latLng.latitude, latLng.longitude)
+                    true
+                }
+            }
+        }
+
+        dialogView.findViewById<ImageButton>(R.id.btnAddChildMyLocation).setOnClickListener {
+            if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                fusedLocationClient.lastLocation.addOnSuccessListener { loc: Location? ->
+                    loc?.let {
+                        val latLng = LatLng(it.latitude, it.longitude)
+                        mapLibreMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 17.5))
+                        updateDialogMarker(latLng)
+                        getAddressFromLocation(it.latitude, it.longitude)
+                    }
+                }
+            } else {
+                requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+            }
+        }
+
+        val avatarClickAction = View.OnClickListener {
+            if (tempAvatarUri != null) {
+                showPreviewDialog(tempAvatarUri!!)
+            } else {
+                pickAvatarLauncher.launch("image/*")
+            }
+        }
+
+        dialogView.findViewById<View>(R.id.viewAddChildAvatarBg).setOnClickListener(avatarClickAction)
+        dialogAvatarView?.setOnClickListener(avatarClickAction)
+        dialogView.findViewById<ImageButton>(R.id.btnAddChildPhoto).setOnClickListener { pickAvatarLauncher.launch("image/*") }
+
+        dialogView.findViewById<ImageButton>(R.id.btnDismissAddChild).setOnClickListener { dialog.dismiss() }
+
+        dialogView.findViewById<Button>(R.id.btnAddChildConfirm).setOnClickListener { btn ->
+            val fName = dialogView.findViewById<EditText>(R.id.etAddChildFirstName).text.toString().trim()
+            val lName = dialogView.findViewById<EditText>(R.id.etAddChildLastName).text.toString().trim()
+            val mName = dialogView.findViewById<EditText>(R.id.etAddChildMiddleName).text.toString().trim()
+            val age = dialogView.findViewById<EditText>(R.id.etAddChildAge).text.toString().trim()
+            val section = dialogView.findViewById<EditText>(R.id.etAddChildSection).text.toString().trim()
+            val school = dialogView.findViewById<EditText>(R.id.etAddChildSchool).text.toString().trim()
+            val address = etAddChildAddress?.text.toString().trim()
+
+            val allergies = dialogView.findViewById<EditText>(R.id.etAddChildAllergies).text.toString().trim()
+            val medications = dialogView.findViewById<EditText>(R.id.etAddChildMedications).text.toString().trim()
+            val conditions = dialogView.findViewById<EditText>(R.id.etAddChildConditions).text.toString().trim()
+
+            if (fName.isEmpty() || lName.isEmpty() || age.isEmpty() || section.isEmpty() || school.isEmpty() || address.isNullOrEmpty() || selectedGrade.isEmpty() || selectedLatitude == null) {
+                Toast.makeText(requireContext(), "Please fill in all required fields (*)", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            btn.isEnabled = false
+            if (tempAvatarUri != null) {
+                uploadChildPhotoAndSave(fName, lName, mName, selectedSuffixStr, age, section, school, selectedGrade, address, selectedLatitude!!, selectedLongitude!!, selectedBloodType, allergies, medications, conditions, dialog)
+            } else {
+                saveChildData(fName, lName, mName, selectedSuffixStr, age, section, school, selectedGrade, address, selectedLatitude!!, selectedLongitude!!, selectedBloodType, allergies, medications, conditions, "", dialog)
+            }
+        }
+        dialog.setOnDismissListener {
+            mapView.onDestroy()
+            mapLibreMap = null
+        }
+        dialog.show()
+    }
+
+    private fun updateDialogMarker(latLng: LatLng) {
+        mapLibreMap?.getStyle { style ->
+            val source = style.getSourceAs<GeoJsonSource>(MARKER_SOURCE_ID)
+            source?.setGeoJson(Feature.fromGeometry(Point.fromLngLat(latLng.longitude, latLng.latitude)))
+        }
+    }
+
+    private fun getAddressFromLocation(lat: Double, lon: Double) {
+        try {
+            val geocoder = Geocoder(requireContext(), Locale.getDefault())
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                geocoder.getFromLocation(lat, lon, 1) { addresses ->
+                    if (addresses.isNotEmpty()) {
+                        val address = addresses[0].getAddressLine(0)
+                        requireActivity().runOnUiThread {
+                            etAddChildAddress?.setText(address)
+                        }
+                    }
+                }
+            } else {
+                @Suppress("DEPRECATION")
+                val addresses = geocoder.getFromLocation(lat, lon, 1)
+                if (!addresses.isNullOrEmpty()) {
+                    etAddChildAddress?.setText(addresses[0].getAddressLine(0))
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun uploadChildPhotoAndSave(
+        fName: String, lName: String, mName: String, suffix: String,
+        age: String, section: String, school: String, grade: String,
+        address: String, lat: Double, lon: Double, blood: String,
+        allergies: String, meds: String, conds: String, dialog: AlertDialog
+    ) {
+        val uid = auth.currentUser?.uid ?: return
+        val uploadUri = tempAvatarUri ?: return
+
+        Toast.makeText(requireContext(), "Uploading child photo...", Toast.LENGTH_SHORT).show()
+
+        val ts = System.currentTimeMillis()
+        val cleanedFName = fName.filter { it.isLetterOrDigit() }
+        val publicId = "child_${cleanedFName}_$ts"
+
+        MediaManager.get().upload(uploadUri)
+            .unsigned("buswatch_unsigned")
+            .option("folder", "parents/$uid")
+            .option("public_id", publicId)
+            .callback(object : UploadCallback {
+                override fun onStart(requestId: String) {}
+                override fun onProgress(requestId: String, bytes: Long, totalBytes: Long) {}
+                override fun onSuccess(requestId: String, resultData: MutableMap<Any?, Any?>?) {
+                    val url = resultData?.get("secure_url") as? String ?: ""
+                    saveChildData(fName, lName, mName, suffix, age, section, school, grade, address, lat, lon, blood, allergies, meds, conds, url, dialog)
+                }
+                override fun onError(requestId: String, error: ErrorInfo?) {
+                    Toast.makeText(requireContext(), "Upload failed: ${error?.description}", Toast.LENGTH_SHORT).show()
+                    dialog.findViewById<Button>(R.id.btnAddChildConfirm)?.isEnabled = true
+                }
+                override fun onReschedule(requestId: String, error: ErrorInfo?) {}
+            }).dispatch()
+    }
+
+    private fun saveChildData(
+        fName: String, lName: String, mName: String, suffix: String,
+        age: String, section: String, school: String, grade: String,
+        address: String, lat: Double, lon: Double, blood: String,
+        allergies: String, meds: String, conds: String, photoUrl: String, dialog: AlertDialog
+    ) {
+        val uid = auth.currentUser?.uid ?: return
+        val newChild = mapOf(
+            "firstName" to fName,
+            "lastName" to lName,
+            "middleName" to mName,
+            "suffix" to suffix,
+            "age" to age,
+            "class" to section,
+            "school" to school,
+            "grade" to grade,
+            "address" to address,
+            "latitude" to lat,
+            "longitude" to lon,
+            "childAvatarUrl" to photoUrl,
+            "bloodType" to blood,
+            "allergies" to allergies,
+            "medications" to meds,
+            "conditions" to conds,
+            "status" to "AT HOME"
+        )
+
+        db.collection("parents").document(uid).set(
+            mapOf("children" to FieldValue.arrayUnion(newChild)),
+            SetOptions.merge()
+        ).addOnSuccessListener {
+            Toast.makeText(requireContext(), "Child profile added successfully!", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
+        }.addOnFailureListener { e ->
+            Toast.makeText(requireContext(), "Database Error: ${e.message}", Toast.LENGTH_SHORT).show()
+            dialog.findViewById<Button>(R.id.btnAddChildConfirm)?.isEnabled = true
+        }
+    }
+
+
+    private fun showPreviewDialog(uri: Uri) {
+        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_add_photo, null)
+        val dialog = AlertDialog.Builder(requireContext()).setView(dialogView).create()
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val ivAvatarPreview = dialogView.findViewById<ImageView>(R.id.ivPreviewAvatar)
+        val cvAvatar = dialogView.findViewById<View>(R.id.cvAvatarPreview)
+        val btnDelete = dialogView.findViewById<ImageButton>(R.id.btnDeletePhoto)
+
+        cvAvatar.visibility = View.VISIBLE
+        Glide.with(this).load(uri).circleCrop().into(ivAvatarPreview)
+
+        btnDelete.setOnClickListener {
+            dialog.dismiss()
+            tempAvatarUri = null
+            dialogAvatarView?.setImageResource(CommonR.drawable.user)
+            tvPhotoRequired?.visibility = View.VISIBLE
+            tvPhotoRequired?.text = "Child Photo (Optional)"
+            tvPhotoRequired?.setTextColor(Color.GRAY)
+        }
+        dialogView.findViewById<Button>(R.id.btnPreviewCancel).setOnClickListener { dialog.dismiss() }
+        dialogView.findViewById<Button>(R.id.btnPreviewSave).setOnClickListener {
+            dialog.dismiss()
+            tempAvatarUri = uri
+            Glide.with(this).load(uri).circleCrop().into(dialogAvatarView!!)
+            tvPhotoRequired?.visibility = View.GONE
+        }
+        dialog.show()
+    }
+
+    private fun showBulkDeleteWarning(selectedChildren: List<ChildDetail>) {
+        val names = selectedChildren.joinToString(", ") { it.name }
+        AlertDialog.Builder(requireContext())
+            .setTitle("Confirm Removal")
+            .setMessage("Are you sure you want to remove the following children from your profile: $names?")
+            .setPositiveButton("Remove") { _, _ ->
+                deleteMultipleChildren(selectedChildren)
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+
+    private fun deleteMultipleChildren(selectedChildren: List<ChildDetail>) {
+        val uid = auth.currentUser?.uid ?: return
+        val docRef = db.collection("parents").document(uid)
+
+        val childrenToRemove = selectedChildren.filter { it.id != "primary_child" }.mapNotNull { child ->
+            child.originalData
+        }
+
+        val hasPrimary = selectedChildren.any { it.id == "primary_child" }
+
+        if (childrenToRemove.isNotEmpty()) {
+            docRef.update("children", FieldValue.arrayRemove(*childrenToRemove.toTypedArray()))
+                .addOnSuccessListener {
+                    if (hasPrimary) {
+                        deletePrimaryChild(uid)
+                    } else {
+                        onDeletionComplete()
+                    }
+                }
+        } else if (hasPrimary) {
+            deletePrimaryChild(uid)
+        }
+    }
+
+    private fun deletePrimaryChild(uid: String) {
+        db.collection("parents").document(uid).update("child", FieldValue.delete())
+            .addOnSuccessListener {
+                onDeletionComplete()
+            }
+    }
+
+    private fun onDeletionComplete() {
+        Toast.makeText(requireContext(), "The selected child profiles have been removed", Toast.LENGTH_SHORT).show()
+        isDeleteMode = false
+        adapter.setDeleteMode(false)
+        view?.findViewById<Button>(R.id.btnConfirmDeleteChildren)?.visibility = View.GONE
+    }
+
+    private fun showEditProfileDialog() {
+        val uid = auth.currentUser?.uid ?: return
+        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_edit_profile, null)
+        val dialog = AlertDialog.Builder(requireContext(), android.R.style.Theme_Material_Light_NoActionBar_Fullscreen)
+            .setView(dialogView)
+            .create()
+
+        tempAvatarUri = null
+        dialogAvatarView = dialogView.findViewById(R.id.imgEditProfileAvatar)
+        tvPhotoRequired = null
+
+        val etFirstName = dialogView.findViewById<EditText>(R.id.etEditFirstName)
+        val etLastName = dialogView.findViewById<EditText>(R.id.etEditLastName)
+        val etMiddleName = dialogView.findViewById<EditText>(R.id.etEditMiddleName)
+        val suffixSelector = dialogView.findViewById<FrameLayout>(R.id.btnEditProfileSuffix)
+        val tvSelectedSuffix = dialogView.findViewById<TextView>(R.id.tvEditProfileSelectedSuffix)
+        var selectedSuffixStrStr = ""
+
+        val etEmail = dialogView.findViewById<EditText>(R.id.etEditEmail)
+        val etPhone = dialogView.findViewById<EditText>(R.id.etEditPhone)
+
+        db.collection("parents").document(uid).get().addOnSuccessListener { doc ->
+            @Suppress("UNCHECKED_CAST")
+            val profile = doc.get("profile") as? KMap<String, Any>
+
+            etFirstName.setText(profile?.get("firstName") as? String ?: "")
+            etLastName.setText(profile?.get("lastName") as? String ?: "")
+            etMiddleName.setText(profile?.get("middleName") as? String ?: "")
+
+            selectedSuffixStrStr = profile?.get("suffix") as? String ?: ""
+            if (selectedSuffixStrStr.isNotEmpty()) {
+                tvSelectedSuffix.text = selectedSuffixStrStr
+                tvSelectedSuffix.setTextColor(Color.BLACK)
+            } else {
+                tvSelectedSuffix.text = getString(CommonR.string.suffix)
+                tvSelectedSuffix.setTextColor("#888888".toColorInt())
+            }
+
+            etEmail.setText(profile?.get("email") as? String ?: "")
+            etPhone.setText(profile?.get("phone") as? String ?: "")
+
+            val avatarUrl = profile?.get("parentAvatarUrl") as? String ?: ""
+
+            if (avatarUrl.isNotEmpty()) {
+                Glide.with(this).load(avatarUrl).placeholder(CommonR.drawable.user).error(CommonR.drawable.user).circleCrop().into(dialogAvatarView!!)
+            } else {
+                Glide.with(this).load(CommonR.drawable.user).circleCrop().into(dialogAvatarView!!)
+            }
+        }
+
+        suffixSelector.setOnClickListener {
+            val suffixes = arrayOf("None", "Jr.", "Sr.", "II", "III", "IV", "V")
+            AlertDialog.Builder(requireContext())
+                .setTitle("Select Suffix")
+                .setItems(suffixes) { _, person ->
+                    selectedSuffixStrStr = if (person == 0) "" else suffixes[person]
+                    tvSelectedSuffix.text = if (person == 0) getString(CommonR.string.suffix) else suffixes[person]
+                    tvSelectedSuffix.setTextColor(if (person == 0) "#888888".toColorInt() else Color.BLACK)
+                }
+                .show()
+        }
+
+        val avatarClickAction = View.OnClickListener {
+            if (tempAvatarUri != null) {
+                showPreviewDialog(tempAvatarUri!!)
+            } else {
+                pickAvatarLauncher.launch("image/*")
+            }
+        }
+
+        dialogView.findViewById<View>(R.id.rlEditProfileAvatar).setOnClickListener(avatarClickAction)
+        dialogAvatarView?.setOnClickListener(avatarClickAction)
+        dialogView.findViewById<View>(R.id.btnChangeProfilePhoto).setOnClickListener { pickAvatarLauncher.launch("image/*") }
+
+        dialogView.findViewById<ImageButton>(R.id.btnDismissEditProfile).setOnClickListener { dialog.dismiss() }
+        dialogView.findViewById<Button>(R.id.btnCancelEdit).setOnClickListener { dialog.dismiss() }
+
+        val btnSave = dialogView.findViewById<Button>(R.id.btnSaveProfile)
+        btnSave.setOnClickListener {
+            val updates = mutableMapOf<String, Any>(
+                "profile.firstName" to etFirstName.text.toString().trim(),
+                "profile.lastName" to etLastName.text.toString().trim(),
+                "profile.middleName" to etMiddleName.text.toString().trim(),
+                "profile.suffix" to selectedSuffixStrStr,
+                "profile.email" to etEmail.text.toString().trim(),
+                "profile.phone" to etPhone.text.toString().trim()
+            )
+
+            btnSave.isEnabled = false
+            Toast.makeText(requireContext(), "Updating profile...", Toast.LENGTH_SHORT).show()
+
+            if (tempAvatarUri != null) {
+                uploadParentPhotoAndSave(tempAvatarUri!!, updates, dialog)
+            } else {
+                db.collection("parents").document(uid).update(updates)
+                    .addOnSuccessListener {
+                        Toast.makeText(requireContext(), "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                        dialog.dismiss()
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(requireContext(), "Update failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                        btnSave.isEnabled = true
+                    }
+            }
+        }
+        dialog.show()
+    }
+
+    private fun uploadParentPhotoAndSave(uploadUri: Uri, updates: MutableMap<String, Any>, dialog: AlertDialog) {
+        val uid = auth.currentUser?.uid ?: return
+
+        Toast.makeText(requireContext(), "Uploading parent photo...", Toast.LENGTH_SHORT).show()
+
+        MediaManager.get().upload(uploadUri)
+            .unsigned("buswatch_unsigned")
+            .option("folder", "parents/$uid")
+            .option("public_id", "parent_avatar")
+            .callback(object : UploadCallback {
+                override fun onStart(requestId: String) {}
+                override fun onProgress(requestId: String, bytes: Long, totalBytes: Long) {}
+                override fun onSuccess(requestId: String, resultData: MutableMap<Any?, Any?>?) {
+                    val url = resultData?.get("secure_url") as? String ?: ""
+                    updates["profile.parentAvatarUrl"] = url
+
+                    db.collection("parents").document(uid)
+                        .update(updates)
+                        .addOnSuccessListener {
+                            Toast.makeText(requireContext(), "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                            dialog.dismiss()
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(requireContext(), "Database Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                            dialog.findViewById<Button>(R.id.btnSaveProfile)?.isEnabled = true
+                        }
+                }
+                override fun onError(requestId: String, error: ErrorInfo?) {
+                    Toast.makeText(requireContext(), "Upload failed: ${error?.description}", Toast.LENGTH_SHORT).show()
+                    dialog.findViewById<Button>(R.id.btnSaveProfile)?.isEnabled = true
+                }
+                override fun onReschedule(requestId: String, error: ErrorInfo?) {}
+            }).dispatch()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        parentListener?.remove()
+    }
+}

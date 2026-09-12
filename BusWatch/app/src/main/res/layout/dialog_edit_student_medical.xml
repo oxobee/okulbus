@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_details_card"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvEditMedicalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medical_information"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnDismissEditMedical"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="-12dp"
+        android:layout_marginTop="-12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/close"
+        android:padding="14dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#666666" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvMedicalFields"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/llMedicalActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="450dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEditMedicalTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Blood Type and Insurance Provider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/blood_type"
+                        android:textColor="#241E40"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/etEditBloodType"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/rectangle_hollow_with_shadow"
+                        android:hint="@string/select_blood_type"
+                        android:inputType="text"
+                        android:autofillHints="none"
+                        android:paddingHorizontal="12dp"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/gray_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/insurance_provider"
+                        android:textColor="#241E40"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/etEditInsuranceProvider"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/rectangle_hollow_with_shadow"
+                        android:hint="@string/insurance_provider"
+                        android:inputType="text"
+                        android:autofillHints="none"
+                        android:paddingHorizontal="12dp"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/gray_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Policy Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/policy_number"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEditPolicyNumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/policy_number"
+                android:inputType="number"
+                android:autofillHints="none"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D1CFCF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/physician_information"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Physician Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEditPhysicianName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/physician_name"
+                android:inputType="textPersonName"
+                android:autofillHints="personName"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+
+            <!-- Physician Phone -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etEditPhysicianPhone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/physician_phone"
+                android:inputType="phone"
+                android:autofillHints="phoneNumber"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D1CFCF" />
+
+            <!-- Allergies -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allergies"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEditAllergies"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/enter_child_allergies"
+                android:inputType="text"
+                android:autofillHints="none"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+
+            <!-- Medications -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/current_medication"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEditMedications"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/enter_child_medications"
+                android:inputType="text"
+                android:autofillHints="none"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+
+            <!-- Conditions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/medical_condition"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEditConditions"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/enter_child_medical_conditions"
+                android:inputType="text"
+                android:autofillHints="none"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+
+            <!-- Dietary Restrictions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/dietary_restrictions"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEditDietary"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/dietary_restrictions"
+                android:inputType="text"
+                android:autofillHints="none"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+
+            <!-- Special Needs -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/special_needs_instructions"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEditSpecialNeeds"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:gravity="top"
+                android:hint="@string/special_needs_instructions"
+                android:inputType="textMultiLine"
+                android:autofillHints="none"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:textColorHint="@color/gray_text" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/llMedicalActions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nsvMedicalFields">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelEdit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="@string/cancel_caps"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="20dp"
+            app:strokeColor="#000000"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveMedical"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="@string/save_caps"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FEBE1E"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

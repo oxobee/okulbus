@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:id="@+id/scrollViewSignup3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="32dp">
+
+            <!-- Top Header -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/logo_with_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tvBusWatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buswatch"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivLogo"
+                app:layout_constraintStart_toEndOf="@+id/ivLogo"
+                app:layout_constraintTop_toTopOf="@+id/ivLogo"
+                android:layout_marginStart="8dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="32dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="32dp" />
+
+            <!-- Progress Indicators -->
+            <View
+                android:id="@+id/viewParent"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="79dp"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#FEBE1E"
+                app:layout_constraintEnd_toStartOf="@+id/viewChild"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivParent"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="@string/user_icon"
+                android:src="@drawable/user"
+                app:layout_constraintBottom_toBottomOf="@+id/viewParent"
+                app:layout_constraintEnd_toEndOf="@+id/viewParent"
+                app:layout_constraintStart_toStartOf="@+id/viewParent"
+                app:layout_constraintTop_toTopOf="@+id/viewParent"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView173"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/parent_information_newline"
+                android:textColor="#FEBE1E"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/viewParent"
+                app:layout_constraintStart_toStartOf="@+id/viewParent"
+                app:layout_constraintTop_toBottomOf="@+id/viewParent" />
+
+            <View
+                android:id="@+id/viewEmergency"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#FEBE1E"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toEndOf="@+id/viewChild"
+                app:layout_constraintTop_toTopOf="@+id/viewParent" />
+
+            <ImageView
+                android:id="@+id/ivEmergency"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="@string/medical_icon"
+                android:src="@drawable/heart"
+                app:layout_constraintBottom_toBottomOf="@+id/viewEmergency"
+                app:layout_constraintEnd_toEndOf="@+id/viewEmergency"
+                app:layout_constraintStart_toStartOf="@+id/viewEmergency"
+                app:layout_constraintTop_toTopOf="@+id/viewEmergency"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView175"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/emergency"
+                android:textColor="#FEBE1E"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/viewEmergency"
+                app:layout_constraintStart_toStartOf="@+id/viewEmergency"
+                app:layout_constraintTop_toBottomOf="@+id/viewEmergency" />
+
+            <View
+                android:id="@+id/viewChild"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#FEBE1E"
+                app:layout_constraintEnd_toStartOf="@+id/viewEmergency"
+                app:layout_constraintStart_toEndOf="@+id/viewParent"
+                app:layout_constraintTop_toTopOf="@+id/viewParent" />
+
+            <ImageView
+                android:id="@+id/imageView38"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="@string/child_icon"
+                android:src="@drawable/child"
+                app:layout_constraintBottom_toBottomOf="@+id/viewChild"
+                app:layout_constraintEnd_toEndOf="@+id/viewChild"
+                app:layout_constraintStart_toStartOf="@+id/viewChild"
+                app:layout_constraintTop_toTopOf="@+id/viewChild"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView174"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/child_information_newline"
+                android:textColor="#FEBE1E"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/viewChild"
+                app:layout_constraintStart_toStartOf="@+id/viewChild"
+                app:layout_constraintTop_toBottomOf="@+id/viewChild" />
+
+            <!-- Connecting Lines -->
+            <View
+                android:id="@+id/viewProgressLine1"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="#FEBE1E"
+                app:layout_constraintBottom_toBottomOf="@+id/viewParent"
+                app:layout_constraintEnd_toStartOf="@+id/viewChild"
+                app:layout_constraintStart_toEndOf="@+id/viewParent"
+                app:layout_constraintTop_toTopOf="@+id/viewParent" />
+
+            <View
+                android:id="@+id/viewProgressLine2"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="#FEBE1E"
+                app:layout_constraintBottom_toBottomOf="@+id/viewChild"
+                app:layout_constraintEnd_toStartOf="@+id/viewEmergency"
+                app:layout_constraintStart_toEndOf="@+id/viewChild"
+                app:layout_constraintTop_toTopOf="@+id/viewChild" />
+
+            <!-- Form Title -->
+            <TextView
+                android:id="@+id/tvCreateAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/create_account"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView174" />
+
+            <TextView
+                android:id="@+id/tvChildNameDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvCreateAccount" />
+
+            <!-- Emergency Contact 1 -->
+            <LinearLayout
+                android:id="@+id/llEmergency1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvChildNameDisplay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency_contact_1"
+                    android:textColor="#241E40"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asterisk"
+                    android:textColor="#FF0000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tvLabelName1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/llEmergency1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_full_name"
+                    android:textColor="#241E40"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asterisk"
+                    android:textColor="#FF0000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextText17"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/enter_contact_full_name"
+                android:inputType="textPersonName"
+                android:autofillHints="name"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelName1"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvContact1NameWarning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/name_warning"
+                android:textColor="#FF0000"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText17" />
+
+            <LinearLayout
+                android:id="@+id/tvLabelPhone1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvContact1NameWarning">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_phone_number"
+                    android:textColor="#241E40"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asterisk"
+                    android:textColor="#FF0000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmergencyPhoneContainer1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelPhone1">
+
+                <FrameLayout
+                    android:id="@+id/btnSignup3EmergencyCountryCode1"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/rectangle_hollow_with_shadow"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <TextView
+                        android:id="@+id/tvSignup3EmergencyCountryCode1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/country_code_ph"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/etEmergencyPhone1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_hollow_with_shadow"
+                    android:hint="@string/phone_hint"
+                    android:inputType="phone"
+                    android:autofillHints="phone"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLabelRel1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/llEmergencyPhoneContainer1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/relationship"
+                    android:textColor="#241E40"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asterisk"
+                    android:textColor="#FF0000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextText19"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/enter_contact_relationship"
+                android:inputType="text"
+                android:autofillHints="none"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/llLabelRel1"
+                android:layout_marginTop="4dp" />
+
+            <!-- Emergency Contact 2 -->
+            <TextView
+                android:id="@+id/llEmergency2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/emergency_contact_2_optional"
+                android:textColor="#241E40"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText19" />
+
+            <TextView
+                android:id="@+id/tvLabelName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_full_name"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/llEmergency2"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/editTextText20"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/enter_contact_full_name"
+                android:inputType="textPersonName"
+                android:autofillHints="name"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelName2"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvContact2NameWarning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/name_warning"
+                android:textColor="#FF0000"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText20" />
+
+            <TextView
+                android:id="@+id/tvLabelPhone2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_phone_number"
+                android:textColor="#241E40"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvContact2NameWarning"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:id="@+id/llEmergencyPhoneContainer2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelPhone2">
+
+                <FrameLayout
+                    android:id="@+id/btnSignup3EmergencyCountryCode2"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/rectangle_hollow_with_shadow"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <TextView
+                        android:id="@+id/tvSignup3EmergencyCountryCode2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/country_code_ph"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/etEmergencyPhone2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_hollow_with_shadow"
+                    android:hint="@string/phone_hint"
+                    android:inputType="phone"
+                    android:autofillHints="phone"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLabelRel2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/llEmergencyPhoneContainer2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/relationship"
+                    android:textColor="#241E40"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextText21"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_hollow_with_shadow"
+                android:hint="@string/enter_contact_relationship"
+                android:inputType="text"
+                android:autofillHints="none"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/llLabelRel2"
+                android:layout_marginTop="4dp" />
+
+            <!-- Terms and Conditions Section (Box Look) -->
+            <LinearLayout
+                android:id="@+id/llTermsBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_terms_box"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText21">
+
+                <CheckBox
+                    android:id="@+id/cbTerms"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:button="@drawable/cb_selector"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/tvTermsLinks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/agree_to_terms_and_privacy"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.2" />
+            </LinearLayout>
+
+            <!-- Navigation Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/llTermsBox">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignup3Back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/back_caps"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#FFFFFF"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignup3Register"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/register"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#FEBE1E"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Fragment Container for Legal Content -->
+    <FrameLayout
+        android:id="@+id/signupFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:background="#FFFFFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
