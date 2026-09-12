@@ -1,203 +1,579 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BusWatch | Official Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Okulbus | Akıllı Okul Servisi ve Filo Takip Sistemi</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Üst Gezinme Çubuğu (Navbar) -->
     <nav>
-        <a href="#" class="logo">
-            <img src="bus.png" alt="BusWatch Logo">
-            BUSWATCH
+        <a href="#" class="logo" onclick="showLandingView()">
+            <img src="bus.png" alt="Okulbus Logo">
+            <span>OKULBUS</span>
         </a>
+
         <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#preview">App Preview</a>
-            <a href="#download">Download</a>
-            <a href="#team">Our Team</a>
+            <a href="#features" onclick="showLandingView()">Özellikler</a>
+            <a href="#preview" onclick="showLandingView()">Uygulama</a>
+            <a href="#demo-accounts" onclick="showLandingView()">Demo Hesaplar</a>
             <a href="https://github.com/oxobee/okulbus" target="_blank" class="github-btn">
                 <i class="fab fa-github"></i> GitHub
             </a>
+            
+            <!-- Giriş Durumu / Butonu -->
+            <div id="navAuthArea">
+                <a href="#login-section" class="btn-nav-login" onclick="scrollToLogin()">
+                    <i class="fas fa-sign-in-alt"></i> Giriş Yap / Test Et
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <img src="bus.png" class="hero-bus" alt="Bus">
-        <h1>The School Bus,<br>Now on Your Phone.</h1>
-        <p>Real-time tracking that brings the school bus to your screen. Stay connected to your child's journey and enjoy the peace of mind you deserve.</p>
-        <a href="https://github.com/GabMiel/BusWatch/releases/latest" target="_blank" class="btn pulse-btn">
-            <i class="fab fa-android"></i>
-            Download for Android
-        </a>
-    </header>
+    <!-- CANLI BİLDİRİM TOAST ALANI -->
+    <div id="toastContainer" class="toast-container"></div>
 
-    <!-- Section 1: Features (Pure White) -->
-    <section class="container" id="features">
-        <h2 class="section-title">Key Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon-wrapper"><img src="map3.png" alt="Map" class="floating-icon"></div>
-                <h3>Interactive Map</h3>
-                <p>Monitor your child's bus live with high-precision tracking.</p>
+    <!-- 1. LANDING PAGE & TANITIM BÖLÜMÜ -->
+    <main id="landingView">
+        <!-- Hero Alanı -->
+        <header class="hero">
+            <img src="bus.png" class="hero-bus" alt="Okul Servisi">
+            <div class="hero-badge"><i class="fas fa-satellite-dish"></i> Canlı GPS & Akıllı Takip Sistemi</div>
+            <h1>Okul Servisi Takibinde<br>Yeni Nesil Güvenlik</h1>
+            <p>Öğrencinizin servisini canlı haritada anlık izleyin, biniş ve iniş bildirimlerini gecikmesiz alın. Okul yöneticileri, servis şoförleri ve veliler için tek ve entegre platform.</p>
+            
+            <div class="hero-actions">
+                <a href="#login-section" class="btn pulse-btn" onclick="scrollToLogin()">
+                    <i class="fas fa-play-circle"></i> Canlı Demoyu Başlat
+                </a>
+                <a href="#features" class="btn btn-outline">
+                    <i class="fas fa-info-circle"></i> Özellikleri Keşfet
+                </a>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper"><img src="bell.png" alt="Arrivals" class="floating-icon"></div>
-                <h3>Arrival Estimates</h3>
-                <p>Never miss a stop. View estimated arrival times (ETA) for your bus stop.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper"><img src="child.png" alt="Status" class="floating-icon"></div>
-                <h3>Boarding Status</h3>
-                <p>Get instant updates when your child boards or deboards the bus.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper"><img src="bus.png" alt="Safety" class="floating-icon"></div>
-                <h3>Trip Monitoring</h3>
-                <p>Ensuring safety beyond tracking. Admins can access medical profiles during active trips.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="floating-icon">
-                        <path d="M12 2L1 21H23L12 2Z" fill="#2D2D2D"/>
-                        <path d="M11 8H13V14H11V8ZM11 16H13V18H11V16Z" fill="#FEBE1E"/>
-                    </svg>
+
+            <!-- Hızlı İstatistik Şeridi -->
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-number">14+</span>
+                    <span class="stat-label">Aktif Servis Aracı</span>
                 </div>
-                <h3>SOS Alerts</h3>
-                <p>Drivers can send instant SOS signals to school administrators during critical incidents.</p>
+                <div class="stat-box">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Güvenle Taşınan Öğrenci</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">%99.6</span>
+                    <span class="stat-label">Zamanında Varış Oranı</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Aktif Güvenlik Uyarısı</span>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper"><img src="bus.png" style="background: white; padding: 5px; border-radius: 8px;" alt="Verified" class="floating-icon"></div>
-                <h3>Verified Network</h3>
-                <p>Only verified users can access the system, ensuring data is private and secure.</p>
+        </header>
+
+        <!-- HIZLI DEMO GİRİŞ & LOGİN BÖLÜMÜ -->
+        <section class="login-section" id="login-section">
+            <div class="section-badge">Kolay Test & Demo</div>
+            <h2 class="section-title">Tek Tıkla Demo Girişi</h2>
+            <p class="section-subtitle">Sistemi doğrudan deneyimlemek için aşağıdaki test rollerinden birini seçin veya kullanıcı bilgileriyle giriş yapın:</p>
+
+            <!-- 3 BÜYÜK HIZLI GİRİŞ KARTI -->
+            <div class="quick-demo-grid">
+                
+                <!-- 1. YÖNETİCİ KARTI -->
+                <div class="demo-card demo-card-admin">
+                    <div class="demo-card-icon"><i class="fas fa-user-shield"></i></div>
+                    <div class="demo-card-badge">Tüm Yetkiler</div>
+                    <h3>Okul Yönetim Paneli</h3>
+                    <p class="demo-desc">Tüm servis filosu haritası, canlı araç hızları, şoför listesi, öğrenci biniş verileri ve acil durum kontrolü.</p>
+                    <div class="demo-credentials">
+                        <div><i class="fas fa-envelope"></i> <code>yonetici@okulbus.com</code></div>
+                        <div><i class="fas fa-key"></i> <code>okulbus123</code></div>
+                    </div>
+                    <button class="btn btn-demo-action btn-admin" onclick="quickLogin('admin')">
+                        <i class="fas fa-crown"></i> Yönetici Girişi (Tek Tıkla)
+                    </button>
+                </div>
+
+                <!-- 2. ŞOFÖR KARTI -->
+                <div class="demo-card demo-card-driver">
+                    <div class="demo-card-icon"><i class="fas fa-bus"></i></div>
+                    <div class="demo-card-badge">Sürücü Ekranı</div>
+                    <h3>Servis Şoförü Portalı</h3>
+                    <p class="demo-desc">34 OKL 001 plakalı sabah hattı güzergahı, sıradaki duraklar, öğrenci yoklama listesi (Bindi/İndi) ve SOS butonu.</p>
+                    <div class="demo-credentials">
+                        <div><i class="fas fa-envelope"></i> <code>sofor@okulbus.com</code></div>
+                        <div><i class="fas fa-key"></i> <code>okulbus123</code></div>
+                    </div>
+                    <button class="btn btn-demo-action btn-driver" onclick="quickLogin('driver')">
+                        <i class="fas fa-steering-wheel"></i> Şoför Girişi (Tek Tıkla)
+                    </button>
+                </div>
+
+                <!-- 3. VELİ KARTI -->
+                <div class="demo-card demo-card-parent">
+                    <div class="demo-card-icon"><i class="fas fa-heart"></i></div>
+                    <div class="demo-card-badge">Veli Takibi</div>
+                    <h3>Öğrenci Velisi Portalı</h3>
+                    <p class="demo-desc">Çocuğum nerede? Servisin eve yaklaşma süresi (ETA), biniş/iniş zaman çizelgesi ve şoförle doğrudan iletişim.</p>
+                    <div class="demo-credentials">
+                        <div><i class="fas fa-envelope"></i> <code>veli@okulbus.com</code></div>
+                        <div><i class="fas fa-key"></i> <code>okulbus123</code></div>
+                    </div>
+                    <button class="btn btn-demo-action btn-parent" onclick="quickLogin('parent')">
+                        <i class="fas fa-user-friends"></i> Veli Girişi (Tek Tıkla)
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- MANUEL GİRİŞ FORMU (OPSİYONEL) -->
+            <div class="manual-login-box">
+                <div class="login-box-header">
+                    <h4><i class="fas fa-lock"></i> Manuel Bilgi ile Giriş</h4>
+                    <span class="text-muted">veya yukarıdaki hızlı giriş butonlarına tıklayın</span>
+                </div>
+                <form id="manualLoginForm" onsubmit="handleManualLogin(event)">
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> E-Posta Adresi</label>
+                        <input type="email" id="loginEmail" placeholder="ornek: yonetici@okulbus.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-key"></i> Şifre</label>
+                        <input type="password" id="loginPassword" placeholder="Şifreniz" required>
+                    </div>
+                    <div id="loginErrorMessage" class="error-msg" style="display: none;"></div>
+                    <button type="submit" class="btn btn-primary-submit">
+                        <i class="fas fa-sign-in-alt"></i> Giriş Yap
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ÖZELLİKLER BÖLÜMÜ -->
+        <section class="container" id="features">
+            <div class="section-badge">Gelişmiş Teknolojiler</div>
+            <h2 class="section-title">Temel Özellikler</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><img src="map3.png" alt="Harita" class="floating-icon"></div>
+                    <h3>Canlı Rota ve GPS Takibi</h3>
+                    <p>Servis araçlarının anlık konumunu harita üzerinde yüksek hassasiyetle izleyin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><img src="bell.png" alt="Varış Süresi" class="floating-icon"></div>
+                    <h3>Tahmini Varış (ETA) Bildirimleri</h3>
+                    <p>Servis durağınıza yaklaşırken otomatik bildirimler sayesinde durakta bekleme süresini sıfırlayın.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><img src="child.png" alt="Yoklama" class="floating-icon"></div>
+                    <h3>Öğrenci Biniş / İniş Kontrolü</h3>
+                    <p>Öğrenci servise bindiğinde ve indiğinde veliye anında güvenli bildirim iletilir.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><img src="bus.png" alt="Filo Yönetimi" class="floating-icon"></div>
+                    <h3>Okul İdare ve Filo Yönetimi</h3>
+                    <p>Yöneticiler tüm araçları, hız limitlerini, güzergahları ve öğrenci sağlık profillerini tek ekrandan yönetir.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="sos-icon-circle"><i class="fas fa-exclamation-triangle"></i></div>
+                    </div>
+                    <h3>Anlık Acil Durum (SOS) Sinyali</h3>
+                    <p>Sürücüler beklenmedik durumlarda okul idaresine tek tıkla konumlu acil durum sinyali gönderir.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><i class="fas fa-shield-alt icon-shield"></i></div>
+                    <h3>Güvenli ve Yetkilendirilmiş Ağ</h3>
+                    <p>Yalnızca doğrulanmış okul yöneticileri, veliler ve sürücüler sisteme erişebilir; tüm veriler şifrelenir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO HESAP BİLGİLERİ TABLOSU -->
+        <section class="accounts-section" id="demo-accounts">
+            <div class="section-badge">Hazır Bilgiler</div>
+            <h2 class="section-title">Hazır Demo Hesap Listesi</h2>
+            <div class="accounts-table-wrapper">
+                <table class="accounts-table">
+                    <thead>
+                        <tr>
+                            <th>Rol</th>
+                            <th>E-Posta Adresi</th>
+                            <th>Şifre</th>
+                            <th>Erişilen Panel</th>
+                            <th>Hızlı Eylem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge-role badge-admin">Yönetici</span></td>
+                            <td><code>yonetici@okulbus.com</code></td>
+                            <td><code>okulbus123</code></td>
+                            <td>Okul Filosu, GPS Haritası, Servis ve Öğrenci Listesi</td>
+                            <td><button class="btn-table-login" onclick="quickLogin('admin')">Giriş Yap</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge-role badge-driver">Şoför</span></td>
+                            <td><code>sofor@okulbus.com</code></td>
+                            <td><code>okulbus123</code></td>
+                            <td>34 OKL 001 Güzergahı, Öğrenci Yoklaması, SOS</td>
+                            <td><button class="btn-table-login" onclick="quickLogin('driver')">Giriş Yap</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge-role badge-parent">Veli</span></td>
+                            <td><code>veli@okulbus.com</code></td>
+                            <td><code>okulbus123</code></td>
+                            <td>Ahmet Yılmaz Takibi, Yaklaşma Bildirimi, İletişim</td>
+                            <td><button class="btn-table-login" onclick="quickLogin('parent')">Giriş Yap</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- 2. İNTERAKTİF TEST PANELLERİ (ROL BAZLI) -->
+    <div id="dashboardView" class="dashboard-wrapper" style="display: none;">
+        
+        <!-- ÜST PANEL BARI -->
+        <div class="dashboard-header-bar">
+            <div class="dash-user-info">
+                <span class="dash-role-tag" id="currentRoleTag">YÖNETİCİ</span>
+                <span class="dash-user-email" id="currentUserEmail">yonetici@okulbus.com</span>
+            </div>
+            <div class="dash-header-actions">
+                <div class="role-switch-dropdown">
+                    <button class="btn-switch-role" onclick="toggleRoleMenu()">
+                        <i class="fas fa-exchange-alt"></i> Başka Demo Role Geç <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="roleDropdownMenu" class="role-dropdown-menu">
+                        <a href="javascript:void(0)" onclick="quickLogin('admin'); toggleRoleMenu();"><i class="fas fa-crown"></i> Yönetici Paneli</a>
+                        <a href="javascript:void(0)" onclick="quickLogin('driver'); toggleRoleMenu();"><i class="fas fa-bus"></i> Şoför Portalı</a>
+                        <a href="javascript:void(0)" onclick="quickLogin('parent'); toggleRoleMenu();"><i class="fas fa-user-friends"></i> Veli Takip Portalı</a>
+                    </div>
+                </div>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                </button>
             </div>
         </div>
-    </section>
 
-    <!-- Section 2: App Preview (Light Gray Background) -->
-    <section class="ui-showcase" id="preview">
-        <h2 class="section-title">App Preview</h2>
-        <div class="ui-grid">
-            <!-- 1. Login -->
-            <div class="ui-item tilt-card">
-                <img src="Login.png" alt="Secure Login" class="screenshot">
-                <div class="ui-desc">
-                    <h4>Secure Login</h4>
-                    <p>Unified secure entry for parents, drivers, and admins ensuring data privacy and safety.</p>
+        <!-- ============================================== -->
+        <!-- PANEL 1: OKUL YÖNETİM PANELİ (ADMIN DASHBOARD) -->
+        <!-- ============================================== -->
+        <div id="panelAdmin" class="role-panel" style="display: none;">
+            <div class="panel-hero">
+                <div>
+                    <h2><i class="fas fa-tachometer-alt"></i> Okul Servis Filosu Yönetim Merkezi</h2>
+                    <p>Tüm servis araçlarının canlı GPS konumları, güzergah durumları ve öğrenci yoklama istatistikleri.</p>
+                </div>
+                <div class="panel-hero-badge">
+                    <span class="live-dot"></span> SİSTEM CANLI ÇALIŞIYOR
                 </div>
             </div>
 
-            <!-- 2. Parent's Home -->
-            <div class="ui-item tilt-card">
-                <img src="User's Home.png" alt="Parent's Home" class="screenshot">
-                <div class="ui-desc">
-                    <h4>Parent's Home</h4>
-                    <p>Real-time monitoring for parents to track their child's bus location and boarding status.</p>
+            <!-- KPI Kartları -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon kpi-bus"><i class="fas fa-bus"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-val">14 / 14</span>
+                        <span class="kpi-title">Aktif Servis Aracı</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon kpi-students"><i class="fas fa-user-graduate"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-val">312</span>
+                        <span class="kpi-title">Taşınan Öğrenci</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon kpi-ontime"><i class="fas fa-clock"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-val">%99.4</span>
+                        <span class="kpi-title">Zamanında Varış</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon kpi-safe"><i class="fas fa-shield-alt"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-val">0 Alarm</span>
+                        <span class="kpi-title">Acil Durum Bildirimi</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- 3. Driver Home -->
-            <div class="ui-item tilt-card">
-                <img src="Driver Home.png" alt="Driver Home" class="screenshot">
-                <div class="ui-desc">
-                    <h4>Driver Home</h4>
-                    <p>Simplified trip management for drivers featuring instant student checks and SOS signaling.</p>
+            <!-- Canlı Harita Bölümü -->
+            <div class="panel-section-card">
+                <div class="section-card-header">
+                    <h3><i class="fas fa-map-marked-alt"></i> Canlı Servis Filosu Haritası (İstanbul)</h3>
+                    <div class="map-status-pill"><span class="pulse-green"></span> 14 Araç GPS ile Senkronize</div>
+                </div>
+                <div id="adminMap" class="map-container"></div>
+                <div class="map-legend">
+                    <span><i class="fas fa-circle text-yellow"></i> Hareket Halindeki Servisler</span>
+                    <span><i class="fas fa-map-marker-alt text-red"></i> Okul Kampüsü</span>
+                    <span><i class="fas fa-school text-blue"></i> Durak Noktaları</span>
                 </div>
             </div>
 
-            <!-- 4. Driver's Map -->
-            <div class="ui-item tilt-card">
-                <img src="Driver's Map.png" alt="Live Navigation" class="screenshot">
-                <div class="ui-desc">
-                    <h4>Live Navigation</h4>
-                    <p>High-precision interactive maps for drivers showing optimized routes and pickup points.</p>
+            <!-- Servis Araçları Listesi Tablosu -->
+            <div class="panel-section-card">
+                <div class="section-card-header">
+                    <h3><i class="fas fa-list"></i> Servis Araçları & Sürücü Durumları</h3>
+                    <button class="btn-action-small" onclick="showToast('Yeni servis ekleme formu demo modunda pasiftir.', 'info')">
+                        <i class="fas fa-plus"></i> Yeni Servis Ekle
+                    </button>
+                </div>
+                <div class="table-responsive">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Plaka</th>
+                                <th>Sürücü</th>
+                                <th>Telefon</th>
+                                <th>Güzergah</th>
+                                <th>Kapasite</th>
+                                <th>Hız</th>
+                                <th>Canlı Durum</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminBusesTbody">
+                            <!-- JS ile doldurulacak -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <!-- 5. Driver's Map 3D -->
-            <div class="ui-item tilt-card">
-                <img src="Driver's Map 3d view.png" alt="3D Perspective" class="screenshot">
-                <div class="ui-desc">
-                    <h4>3D Perspective</h4>
-                    <p>Enhanced 3D mapping providing drivers with better situational awareness during commutes.</p>
+            <!-- Öğrenci Listesi Tablosu -->
+            <div class="panel-section-card">
+                <div class="section-card-header">
+                    <h3><i class="fas fa-user-friends"></i> Öğrenci Servis Kayıtları & Biniş Durumu</h3>
+                    <input type="text" id="studentSearchInput" class="table-search" placeholder="Öğrenci veya servis ara..." onkeyup="filterStudentList()">
                 </div>
-            </div>
-
-            <!-- 6. Admin Dashboard -->
-            <div class="ui-item tilt-card">
-                <img src="Admin Home.png" alt="Admin Dashboard" class="screenshot">
-                <div class="ui-desc">
-                    <h4>Admin Dashboard</h4>
-                    <p>Comprehensive hub for school administrators to manage students, routes, and monitor fleet operations.</p>
+                <div class="table-responsive">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Öğrenci Adı</th>
+                                <th>Sınıf</th>
+                                <th>Servis Hattı</th>
+                                <th>Durağı</th>
+                                <th>Veli İletişim</th>
+                                <th>Sabah Biniş Durumu</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminStudentsTbody">
+                            <!-- JS ile doldurulacak -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Section 3: Download (Dark Background) -->
-    <section class="download-section" id="download">
-        <h2>Start Tracking Today</h2>
-        <p>Download the official BusWatch Android application and ensure your child's safety during their commute.</p>
-        <a href="https://github.com/GabMiel/BusWatch/releases/latest" target="_blank" class="btn ripple-btn">
-            <i class="fab fa-android"></i>
-            Download for Android
-        </a>
-    </section>
+        <!-- ============================================== -->
+        <!-- PANEL 2: SERVİS ŞOFÖRÜ PORTALI (DRIVER VIEW)   -->
+        <!-- ============================================== -->
+        <div id="panelDriver" class="role-panel" style="display: none;">
+            <div class="panel-hero panel-hero-driver">
+                <div>
+                    <h2><i class="fas fa-steering-wheel"></i> Servis Sürücüsü Kontrol Portalı</h2>
+                    <p>Hat: <strong>34 OKL 001 - Kadıköy / Ataşehir Sabah Servis Hattı</strong> | Sürücü: <strong>Mehmet Kaptan</strong></p>
+                </div>
+                <div>
+                    <button class="btn-sos" onclick="triggerSosAlarm()">
+                        <i class="fas fa-exclamation-triangle"></i> ACİL DURUM (SOS)
+                    </button>
+                </div>
+            </div>
 
-    <!-- Section 4: Team (Light Cream Background) -->
-    <section class="team-section" id="team">
-        <h2 class="section-title">Our Development Team</h2>
-        <div class="team-grid">
-            <div class="team-card reveal-left">
-                <img src="verdan.jpg" class="team-img" alt="Roland Carl A. Verdan">
-                <h3>Verdan, Roland Carl A.</h3>
-                <p>Project Manager</p>
+            <!-- Sürücü Bilgi Şeridi -->
+            <div class="driver-status-bar">
+                <div class="driver-stat">
+                    <span class="label">Sıradaki Durak</span>
+                    <span class="val text-yellow" id="driverNextStop">Ataşehir Migros Kavşağı</span>
+                </div>
+                <div class="driver-stat">
+                    <span class="label">Kalan Mesafe / Süre</span>
+                    <span class="val" id="driverEta">450 m (~2 Dakika)</span>
+                </div>
+                <div class="driver-stat">
+                    <span class="label">Yoklama Durumu</span>
+                    <span class="val" id="driverAttendanceCount">18 / 22 Öğrenci Bindi</span>
+                </div>
+                <div class="driver-stat">
+                    <span class="label">Hız</span>
+                    <span class="val text-green">38 km/s</span>
+                </div>
             </div>
-            <div class="team-card reveal-up">
-                <img src="baluyot.jpg" class="team-img" alt="Joyce Ann J. Baluyot">
-                <h3>Baluyot, Joyce Ann J.</h3>
-                <p>Front End Developer</p>
-            </div>
-            <div class="team-card reveal-right">
-                <img src="cantones.jpg" class="team-img" alt="Jessie James F. Cantones">
-                <h3>Cantones, Jessie James F.</h3>
-                <p>Back End Developer</p>
-            </div>
-            <div class="team-card reveal-left">
-                <img src="cristobal.jpg" class="team-img" alt="Emilita D. Cristobal">
-                <h3>Cristobal, Emilita D.</h3>
-                <p>UI/UX Designer</p>
-            </div>
-            <div class="team-card reveal-up">
-                <img src="miel.jpg" class="team-img" alt="Gabriel Roncake O. Miel">
-                <h3>Miel, Gabriel Roncake O.</h3>
-                <p>Lead Back End Developer</p>
-            </div>
-            <div class="team-card reveal-right">
-                <img src="petre.jpg" class="team-img" alt="Yancee Exequiel G. Petre">
-                <h3>Petre, Yancee Exequiel G.</h3>
-                <p>Documentation</p>
+
+            <div class="grid-2col">
+                <!-- Sol Kolon: Canlı Yoklama Listesi -->
+                <div class="panel-section-card">
+                    <div class="section-card-header">
+                        <h3><i class="fas fa-clipboard-check"></i> Öğrenci Biniş / İniş Yoklaması</h3>
+                        <span class="text-muted text-sm">Tek tıkla bindi/indi işaretleyin</span>
+                    </div>
+                    <div class="attendance-list" id="driverAttendanceList">
+                        <!-- JS ile doldurulacak -->
+                    </div>
+                </div>
+
+                <!-- Sağ Kolon: Sürücü Haritası ve Durak Listesi -->
+                <div class="panel-section-card">
+                    <div class="section-card-header">
+                        <h3><i class="fas fa-route"></i> Güzergah & Navigasyon</h3>
+                    </div>
+                    <div id="driverMap" class="map-container" style="height: 350px;"></div>
+                    
+                    <div class="stops-timeline" id="driverStopsTimeline">
+                        <!-- JS ile doldurulacak -->
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
+        <!-- ============================================== -->
+        <!-- PANEL 3: ÖĞRENCİ VELİSİ PORTALI (PARENT VIEW) -->
+        <!-- ============================================== -->
+        <div id="panelParent" class="role-panel" style="display: none;">
+            <div class="panel-hero panel-hero-parent">
+                <div>
+                    <h2><i class="fas fa-heart"></i> Veli Takip Portalı</h2>
+                    <p>Öğrenci: <strong>Ahmet Yılmaz</strong> (4-B Sınıfı - No: 412) | Servis: <strong>34 OKL 001</strong></p>
+                </div>
+                <div class="eta-pill">
+                    <i class="fas fa-clock"></i> Servis 2 durak sonra (~5 dk) evinizde
+                </div>
+            </div>
+
+            <div class="grid-2col">
+                <!-- Sol Kolon: Canlı Servis Takip Haritası -->
+                <div class="panel-section-card">
+                    <div class="section-card-header">
+                        <h3><i class="fas fa-map-marker-alt"></i> Çocuğumun Servisi Nerede?</h3>
+                        <div class="live-pill"><span class="pulse-green"></span> Canlı Konum</div>
+                    </div>
+                    <div id="parentMap" class="map-container" style="height: 380px;"></div>
+                    <div class="parent-map-footer">
+                        <div class="eta-box">
+                            <span class="eta-title">Tahmini Kapınızda Olma Saati</span>
+                            <span class="eta-time">07:45</span>
+                        </div>
+                        <div class="speed-box">
+                            <span class="speed-title">Araç Hızı</span>
+                            <span class="speed-value">36 km/s (Güvenli Sürüş)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ Kolon: Biniş/İniş Bildirimleri & İletişim Kartı -->
+                <div class="parent-info-col">
+                    <!-- Servis & Personel İletişim Kartı -->
+                    <div class="panel-section-card">
+                        <div class="section-card-header">
+                            <h3><i class="fas fa-id-card"></i> Servis Personeli Bilgileri</h3>
+                        </div>
+                        <div class="staff-grid">
+                            <div class="staff-card">
+                                <div class="staff-avatar"><i class="fas fa-user-tie"></i></div>
+                                <div class="staff-details">
+                                    <span class="staff-role">Servis Şoförü</span>
+                                    <strong>Mehmet Kaptan</strong>
+                                    <span class="staff-phone">+90 532 111 22 33</span>
+                                </div>
+                                <a href="tel:+905321112233" class="btn-staff-call" title="Şoförü Ara">
+                                    <i class="fas fa-phone-alt"></i> Ara
+                                </a>
+                            </div>
+                            <div class="staff-card">
+                                <div class="staff-avatar avatar-guide"><i class="fas fa-user-graduate"></i></div>
+                                <div class="staff-details">
+                                    <span class="staff-role">Rehber Öğretmen</span>
+                                    <strong>Zeynep Hanım</strong>
+                                    <span class="staff-phone">+90 533 444 55 66</span>
+                                </div>
+                                <a href="tel:+905334445566" class="btn-staff-call" title="Rehberi Ara">
+                                    <i class="fas fa-phone-alt"></i> Ara
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bildirim Zaman Çizelgesi -->
+                    <div class="panel-section-card">
+                        <div class="section-card-header">
+                            <h3><i class="fas fa-history"></i> Günlük Yolculuk Zaman Çizelgesi</h3>
+                        </div>
+                        <div class="parent-timeline">
+                            <div class="timeline-step step-done">
+                                <div class="step-icon"><i class="fas fa-check"></i></div>
+                                <div class="step-content">
+                                    <strong>Servis Yola Çıktı</strong>
+                                    <span class="step-time">07:15 - Kadıköy başlangıç noktasından hareket etti.</span>
+                                </div>
+                            </div>
+                            <div class="timeline-step step-active">
+                                <div class="step-icon"><i class="fas fa-bus"></i></div>
+                                <div class="step-content">
+                                    <strong>Durağınıza Yaklaşıyor (Şu Anda)</strong>
+                                    <span class="step-time">07:40 - 2 durak kaldı. Lütfen durağınızda hazır bulunun.</span>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-icon"><i class="fas fa-child"></i></div>
+                                <div class="step-content">
+                                    <strong>Öğrenci Biniş Onayı</strong>
+                                    <span class="step-time">Bekleniyor (~07:45)</span>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-icon"><i class="fas fa-school"></i></div>
+                                <div class="step-content">
+                                    <strong>Okula Varış & Güvenli İniş</strong>
+                                    <span class="step-time">Bekleniyor (~08:15)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ALT BİLGİ (FOOTER) -->
     <footer>
-        <a href="#" class="footer-logo">
-            <img src="bus.png" alt="BusWatch Logo">
-            BUSWATCH
+        <a href="#" class="footer-logo" onclick="showLandingView()">
+            <img src="bus.png" alt="Okulbus Logo">
+            OKULBUS
         </a>
-        <p>&copy; 2026 BusWatch Systems. All rights reserved.</p>
-        <p><a href="https://github.com/oxobee/okulbus" target="_blank" class="footer-github"><i class="fab fa-github"></i> View project on GitHub</a></p>
+        <p>&copy; 2026 Okulbus Akıllı Servis ve Güvenlik Teknolojileri. Tüm hakları saklıdır.</p>
+        <p>
+            <a href="https://github.com/oxobee/okulbus" target="_blank" class="footer-github">
+                <i class="fab fa-github"></i> Projeyi GitHub'da Görüntüle (oxobee/okulbus)
+            </a>
+        </p>
         <div class="footer-bottom-text">
-            <p>Built with Firebase Cloud & Android Kotlin SDK.</p>
-            <p>Compliance: Mapping services utilize Osmdroid with custom Tile Usage Policy identification and local tile caching to ensure reliable performance and server integrity.</p>
+            <p>Vercel Yüksek Hızlı Sunucu Altyapısı ile Barındırılmaktadır.</p>
+            <p>Öğrenci Güvenliği, Canlı GPS ve Rota Takip Çözümleri.</p>
         </div>
     </footer>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
